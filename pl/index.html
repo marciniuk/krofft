@@ -1,11 +1,11 @@
-<!DOCTYPE html>
+<!doctype html>
 <html class="h-full" lang="pl">
   <head>
     <!-- Main -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="theme-color" content="#bfdbfe" />
+    <meta name="theme-color" content="#0b1926" />
     <title>KROFFT. Profesjonalne meble na zamówienie.</title>
 
     <!-- Opis dla SEO -->
@@ -15,20 +15,11 @@
     />
 
     <!-- Linki do zasobów -->
-    <link rel="preload" href="/assets/css/main.css" as="style" />
     <link rel="stylesheet" href="/assets/css/main.css" />
-    <link
-      rel="stylesheet"
-      href="/assets/css/fontawesome.css"
-      media="print"
-      onload="this.media='all'"
-    />
-    <noscript>
-      <link rel="stylesheet" href="/assets/css/fontawesome.css" />
-    </noscript>
     <script defer>
       document.addEventListener("DOMContentLoaded", () => {
         const popup = document.getElementById("cookie-popup");
+        if (!popup) return;
         const accepted = localStorage.getItem("cookiesAccepted");
 
         if (!accepted) {
@@ -66,10 +57,10 @@
       content="Indywidualne projekty, wysokiej klasy materiały oraz wieloletnie doświadczenie. Wykonujemy realizacje dla osób fizycznych, firm, powierzchni komercyjnych oraz branży stoczniowej."
     />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://krofft.pl" />
+    <meta property="og:url" content="https://krofft.pl/pl/" />
     <meta
       property="og:image"
-      content="https://krofft.pl/assets/img/krofft-baner.png"
+      content="https://krofft.pl/assets/img/realizacje/apartament-starowiejska/1.webp"
     />
 
     <!-- Twitter Cards -->
@@ -84,7 +75,7 @@
     />
     <meta
       name="twitter:image"
-      content="https://krofft.pl/assets/img/krofft-baner.png"
+      content="https://krofft.pl/assets/img/realizacje/apartament-starowiejska/1.webp"
     />
 
     <!-- Favicony -->
@@ -105,7 +96,7 @@
     <link rel="manifest" href="/assets/favicon/site.webmanifest" />
 
     <!-- SEO -->
-    <link rel="canonical" href="https://krofft.pl/" />
+    <link rel="canonical" href="https://krofft.pl/pl/" />
 
     <!-- Struktura danych - JSON-LD -->
     <script type="application/ld+json">
@@ -113,13 +104,13 @@
         "@context": "https://schema.org",
         "@type": "WebPage",
         "headline": "KROFFT",
-        "url": "https://krofft.pl/",
+        "url": "https://krofft.pl/pl/",
         "publisher": {
           "@type": "Organization",
           "name": "KROFFT",
           "logo": {
             "@type": "ImageObject",
-            "url": "https://krofft.pl/assets/img/krofft-napis.png"
+            "url": "https://krofft.pl/assets/img/krofft-napis.svg"
           }
         }
         "author": {
@@ -134,1193 +125,1268 @@
         "copyrightYear": "2025"
       }
     </script>
-
-    <!-- Preload -->
-    <link
-      rel="preload"
-      as="image"
-      href="/assets/img/krofft-napis.svg"
-      fetchpriority="high"
-    />
   </head>
 
   <body
-    class="bg-blue-100 text-blue-900 flex flex-col min-h-full"
-    onload="loaded=true"
+    class="home-page bg-white text-gray-900 antialiased selection:bg-brand-gold selection:text-brand-navy"
   >
-    <!-- COOKIE POPUP -->
-    <div
-      id="cookie-popup"
-      class="fixed bottom-4 left-1/2 -translate-x-1/2 md:left-auto md:right-4 md:translate-x-0 w-[95%] md:w-[35rem] border-2 border-amber-400 bg-amber-50 text-amber-900 rounded-xl shadow p-4 z-[9999] opacity-100 transition-none"
-      hidden
+    <!-- ==================== HEADER ==================== -->
+    <header
+      class="fixed top-0 left-0 w-full z-50 header-glass transition-all duration-300"
     >
-      <div class="flex flex-col md:flex-row items-center">
-        <img
-          src="/assets/img/cookie.png"
-          alt=""
-          role="presentation"
-          class="h-24 aspect-square m-auto pointer-events-none select-none"
-          decoding="async"
-          fetchpriority="high"
-        />
-        <p class="text-sm md:text-base font-semibold mb-3 mt-3 md:ml-6">
-          Używamy ciasteczek, aby poprawić działanie strony. Kontynuując,
-          zgadzasz się na ich użycie. Przeczytaj więcej w naszej polityce
-          prywatności.
-        </p>
-      </div>
-      <div class="flex justify-end">
-        <button
-          id="accept-cookies"
-          class="bg-transparent hover:bg-amber-700 border-amber-900 hover:border-amber-700 text-amber-900 border-2 hover:text-white text-base px-3 py-1.5 rounded-xl transition-colors font-bold"
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 sm:h-24 flex items-center justify-between gap-4"
+      >
+        <!-- Logo -->
+        <a href="/pl/" class="flex shrink-0 flex-col items-center group">
+          <span
+            class="navbar-logo block w-32 sm:w-48"
+            role="img"
+            aria-label="KROFFT"
+          ></span>
+          <span
+            class="whitespace-nowrap text-[9px] sm:text-[10px] tracking-[0.2em] sm:tracking-[0.3em] text-gray-300 uppercase font-sans -mt-1 group-hover:text-white transition-colors"
+          >
+            — MEBLE NA WYMIAR —
+          </span>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav
+          class="hidden xl:flex items-center space-x-5 2xl:space-x-8 text-[11px] tracking-[0.12em] uppercase font-medium"
         >
-          OK
+          <a
+            href="/pl/o-nas/"
+            class="nav-link text-gray-300 hover:text-white transition-colors"
+            >O NAS</a
+          >
+          <a
+            href="/pl/realizacje/"
+            class="nav-link text-gray-300 hover:text-white transition-colors"
+            >REALIZACJE</a
+          >
+          <a
+            href="/pl/oferta/"
+            class="nav-link text-gray-300 hover:text-white transition-colors"
+            >OFERTA</a
+          >
+          <a
+            href="/pl/proces/"
+            class="nav-link text-gray-300 hover:text-white transition-colors"
+            >PROCES</a
+          >
+          <a
+            href="/pl/produkcja/"
+            class="nav-link text-gray-300 hover:text-white transition-colors"
+            >PRODUKCJA</a
+          >
+          <a
+            href="/pl/kontakt/"
+            class="nav-link text-gray-300 hover:text-white transition-colors"
+            >KONTAKT</a
+          >
+        </nav>
+
+        <!-- Right Actions: Language & CTA -->
+        <div class="hidden xl:flex items-center space-x-4 2xl:space-x-6">
+          <!-- Language dropdown -->
+          <div class="relative">
+            <button
+              id="lang-toggle"
+              class="flex items-center space-x-1 text-[12px] font-medium text-gray-300 hover:text-white uppercase tracking-wider"
+            >
+              <span>PL</span>
+              <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 20 20">
+                <path
+                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                />
+              </svg>
+            </button>
+            <div
+              id="lang-menu"
+              class="hidden absolute right-0 mt-2 w-20 bg-brand-navyDark border border-brand-gold/30 shadow-xl py-1 rounded-sm text-[12px] text-gray-300"
+            >
+              <a
+                href="/pl/"
+                class="block px-3 py-1 hover:bg-brand-navy hover:text-white"
+                >PL</a
+              >
+            </div>
+          </div>
+
+          <!-- CTA Button -->
+          <button
+            data-open-contact-modal
+            class="group inline-flex items-center space-x-2 px-3 py-2 2xl:space-x-3 2xl:px-5 2xl:py-2.5 bg-brand-navy/80 hover:bg-brand-navy text-white text-[11px] tracking-[0.12em] uppercase font-medium border border-white/20 hover:border-brand-gold transition-all duration-300"
+          >
+            <span>POROZMAWIAJMY</span>
+            <span class="arrow-nudge text-brand-gold font-bold">→</span>
+          </button>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button
+          id="mobile-menu-toggle"
+          aria-label="Otwórz menu"
+          aria-controls="mobile-menu"
+          aria-expanded="false"
+          class="xl:hidden p-2 text-white focus:outline-none"
+        >
+          <svg
+            class="w-6 h-6 stroke-current stroke-2"
+            fill="none"
+            viewBox="0 0 24 24"
+          >
+            <path class="menu-icon-line menu-icon-line--top" d="M4 6h16" />
+            <path class="menu-icon-line menu-icon-line--middle" d="M4 12h16" />
+            <path class="menu-icon-line menu-icon-line--bottom" d="M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- Mobile Drawer Menu -->
+    <div
+      id="mobile-menu"
+      class="mobile-menu closed fixed inset-0 z-40 bg-brand-navyDark/98 backdrop-blur-2xl flex flex-col justify-between p-6 pt-28 xl:hidden"
+    >
+      <nav
+        class="flex flex-col space-y-6 text-lg sm:text-xl font-serif tracking-wider text-white"
+      >
+        <a href="/pl/" class="text-brand-gold">GŁÓWNA</a>
+        <a href="/pl/o-nas/" class="hover:text-brand-gold transition-colors"
+          >O NAS</a
+        >
+        <a
+          href="/pl/realizacje/"
+          class="hover:text-brand-gold transition-colors"
+          >REALIZACJE</a
+        >
+        <a href="/pl/oferta/" class="hover:text-brand-gold transition-colors"
+          >OFERTA</a
+        >
+        <a href="/pl/proces/" class="hover:text-brand-gold transition-colors"
+          >PROCES</a
+        >
+        <a href="/pl/produkcja/" class="hover:text-brand-gold transition-colors"
+          >PRODUKCJA</a
+        >
+        <a href="/pl/kontakt/" class="hover:text-brand-gold transition-colors"
+          >KONTAKT</a
+        >
+      </nav>
+
+      <div class="border-t border-white/10 pt-6 space-y-4">
+        <div
+          class="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-gray-300"
+        >
+          <a href="tel:+48696426365" class="hover:text-brand-gold"
+            >+48 696 426 365</a
+          >
+          <a href="mailto:biuro@krofft.pl" class="hover:text-brand-gold"
+            >biuro@krofft.pl</a
+          >
+        </div>
+        <button
+          data-open-contact-modal
+          class="w-full py-3.5 bg-brand-gold text-brand-navy font-medium text-xs uppercase tracking-widest text-center hover:bg-brand-goldHover transition-colors"
+        >
+          POROZMAWIAJMY O PROJEKCIE →
         </button>
       </div>
     </div>
 
-    <!-- Nawigacja -->
-    <div id="naglowek" class="z-30">
-      <div class="sticky top-0 flex w-full bezzaznaczenia">
-        <nav
-          id="navbar"
-          class="w-full fixed text-white shadow-sm transition-all duration-700 shadow-lg shadow-black/30 backdrop-blur-md lg:bg-blue-300/10 bg-blue-300 text-blue-900 h-10 lg:h-14 flex items-center"
+    <!-- ==================== HERO SECTION ==================== -->
+    <section
+      id="hero-slider"
+      class="relative min-h-[95vh] sm:min-h-screen portrait:min-h-[85svh] bg-brand-dark text-white flex items-center pt-24 sm:pt-20 overflow-hidden"
+    >
+      <!-- Background Slides with Placeholders -->
+      <div class="absolute inset-0">
+        <div
+          class="hero-slide absolute inset-0 opacity-100 transition-opacity duration-1000 ease-in-out"
         >
-          <div class="px-6 mx-auto w-full flex items-center justify-between">
-            <!-- Logo i przycisk menu -->
-            <div class="flex items-center gap-4 justify-between w-full z-20">
-              <a class="flex items-center" href="/pl/">
-                <link
-                  rel="preload"
-                  as="image"
-                  href="/assets/img/krofft-napis.svg"
-                />
-                <img
-                  id="logo"
-                  decoding="async"
-                  fetchpriority="high"
-                  width="208"
-                  height="52"
-                  class="w-40 lg:w-52 h-full object-contain"
-                  src="/assets/img/krofft-napis.svg"
-                  alt="Krofft Logo"
-                  fetchpriority="high"
-                />
-              </a>
+          <img
+            src="\assets\img\realizacje\apartament-przymorze-gdansk\1.webp"
+            alt="Zabudowa kuchenna KROFFT z drewnianymi frontami"
+            class="w-full h-full object-cover object-center filter brightness-[0.78]"
+          />
+          <div
+            class="absolute inset-0 bg-linear-to-r from-black/90 via-black/50 to-transparent"
+          ></div>
+          <div
+            class="absolute inset-0 bg-linear-to-t from-brand-dark via-transparent to-black/40"
+          ></div>
+        </div>
+        <div
+          class="hero-slide absolute inset-0 opacity-0 transition-opacity duration-1000 ease-in-out"
+        >
+          <img
+            src="\assets\img\realizacje\kuchnia-rezydencja-gdansk\1.webp"
+            alt="Realizacja kuchni z wyspą"
+            class="w-full h-full object-cover object-center filter brightness-[0.75]"
+          />
+          <div
+            class="absolute inset-0 bg-linear-to-r from-black/90 via-black/50 to-transparent"
+          ></div>
+          <div
+            class="absolute inset-0 bg-linear-to-t from-brand-dark via-transparent to-black/40"
+          ></div>
+        </div>
+        <div
+          class="hero-slide absolute inset-0 opacity-0 transition-opacity duration-1000 ease-in-out"
+        >
+          <img
+            src="\assets\img\realizacje\apartament-letnica-gdansk\1.webp"
+            alt="Frezowane meble na wymiar"
+            class="w-full h-full object-cover object-center filter brightness-[0.75]"
+          />
+          <div
+            class="absolute inset-0 bg-linear-to-r from-black/90 via-black/50 to-transparent"
+          ></div>
+          <div
+            class="absolute inset-0 bg-linear-to-t from-brand-dark via-transparent to-black/40"
+          ></div>
+        </div>
+        <div
+          class="hero-slide absolute inset-0 opacity-0 transition-opacity duration-1000 ease-in-out"
+        >
+          <img
+            src="\assets\img\realizacje\apartament-chwarzno-gdynia\1.webp"
+            alt="Park maszynowy i stolarnia"
+            class="w-full h-full object-cover object-center filter brightness-[0.75]"
+          />
+          <div
+            class="absolute inset-0 bg-linear-to-r from-black/90 via-black/50 to-transparent"
+          ></div>
+          <div
+            class="absolute inset-0 bg-linear-to-t from-brand-dark via-transparent to-black/40"
+          ></div>
+        </div>
+        <div
+          class="hero-slide absolute inset-0 opacity-0 transition-opacity duration-1000 ease-in-out"
+        >
+          <img
+            src="\assets\img\realizacje\apartament-wrzeszcz-gdansk\1.webp"
+            alt="Park maszynowy i stolarnia"
+            class="w-full h-full object-cover object-center filter brightness-[0.75]"
+          />
+          <div
+            class="absolute inset-0 bg-linear-to-r from-black/90 via-black/50 to-transparent"
+          ></div>
+          <div
+            class="absolute inset-0 bg-linear-to-t from-brand-dark via-transparent to-black/40"
+          ></div>
+        </div>
+        <div
+          class="hero-slide absolute inset-0 opacity-0 transition-opacity duration-1000 ease-in-out"
+        >
+          <img
+            src="\assets\img\realizacje\realizacja-komercyjna-barber-pruszcz-gdanski\1.webp"
+            alt="Park maszynowy i stolarnia"
+            class="w-full h-full object-cover object-center filter brightness-[0.75]"
+          />
+          <div
+            class="absolute inset-0 bg-linear-to-r from-black/90 via-black/50 to-transparent"
+          ></div>
+          <div
+            class="absolute inset-0 bg-linear-to-t from-brand-dark via-transparent to-black/40"
+          ></div>
+        </div>
+      </div>
 
-              <button id="menu-btn" class="menu-btn right-0" title="Menu">
-                <span>&#8203;</span>
-                <span>&#8203;</span>
-                <span>&#8203;</span>
-              </button>
+      <!-- Main Content Container -->
+      <div
+        class="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-12 lg:py-20"
+      >
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <!-- Left: Headline & CTA -->
+          <div
+            class="lg:col-span-8 space-y-6 sm:space-y-8 reveal-item revealed"
+          >
+            <div class="space-y-2 sm:space-y-3">
+              <h1
+                class="font-serif text-3xl sm:text-6xl md:text-7xl lg:text-8xl portrait:sm:text-5xl portrait:md:text-6xl portrait:lg:text-7xl font-normal leading-[1.08] tracking-tight text-shadow-lg/30"
+              >
+                Więcej<br />
+                niż wnętrza.
+              </h1>
+              <p
+                class="font-serif text-2xl sm:text-3xl md:text-4xl text-gray-200 font-light leading-snug text-shadow-lg/30"
+              >
+                Przestrzenie tworzone<br />
+                na lata.
+              </p>
             </div>
 
-            <!-- Linki nawigacyjne -->
-            <div class="z-10">
-              <div
-                id="nav-right"
-                class="nav-hidden sidebar flex flex-col lg:flex-row -mx-2 lg:inline-flex lg:items-center h-full bg-blue-300 lg:bg-transparent lg:object-right font-medium w-64 lg:w-auto"
+            <div class="pt-4">
+              <a
+                href="/pl/realizacje/"
+                class="group inline-flex items-center space-x-4 px-7 py-4 bg-brand-navy/90 hover:bg-brand-navy border border-white/20 hover:border-brand-gold text-white text-[12px] uppercase tracking-[0.2em] font-medium transition-all duration-300"
               >
-                <!-- O Nas -->
-                <a
-                  class="mx-2 my-1 text-2xl hover:text-blue-800 whitespace-nowrap"
-                  href="#o-nas"
-                >
-                  O Nas
-                </a>
-                <!-- Oferta z podmenu -->
-                <div class="relative group">
-                  <div
-                    class="mx-2 lg:ml-6 my-1 text-2xl hover:text-blue-800 flex items-center justify-between cursor-pointer select-none group"
-                  >
-                    <a href="#oferta" class="w-2/3 lg:w-full lg:mr-2">Oferta</a>
+                <span>ZOBACZ REALIZACJE</span>
+                <span class="arrow-nudge text-brand-gold font-bold">→</span>
+              </a>
+            </div>
 
-                    <!-- Wrapper na ikonę -->
-                    <div class="w-5 h-5 flex items-center justify-center">
-                      <svg
-                        class="w-5 h-5 text-current transition-transform duration-200 ease-in-out group-hover:rotate-180"
-                        viewBox="0 0 24 24"
-                        fill="currentColor"
-                      >
-                        <polygon
-                          points="12,16 4,8 20,8"
-                          stroke="currentColor"
-                          stroke-width="2"
-                          stroke-linejoin="round"
-                          fill="currentColor"
-                        />
-                      </svg>
-                    </div>
-                  </div>
-                  <!-- Podmenu -->
-                  <div
-                    class="oferta absolute left-0 mt-0 w-full lg:w-60 lg:-ml-12 bg-indigo-100 text-blue-900 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none group-hover:pointer-events-auto z-50 text-base lg:text-lg"
-                  >
-                    <a
-                      href="#meble-na-wymiar"
-                      class="block px-4 py-2 hover:rounded-lg hover:bg-indigo-300 hover:font-bold m-1"
-                    >
-                      Meble na wymiar
-                    </a>
-                    <a
-                      href="#meble-dla-branzy-stoczniowej"
-                      class="block px-4 py-2 hover:rounded-lg hover:bg-indigo-300 hover:font-bold m-1"
-                    >
-                      Meble dla branży stoczniowej
-                    </a>
-                  </div>
-                </div>
-                <!-- Portfolio -->
-                <a
-                  class="mx-2 lg:ml-6 my-1 text-2xl hover:text-blue-800"
-                  href="#portfolio"
+            <!-- Bottom Left: Carousel Number & Controls -->
+            <div
+              class="pt-12 sm:pt-20 flex items-center space-x-6 text-sm tracking-widest text-gray-300"
+            >
+              <div class="flex items-center space-x-1">
+                <span id="hero-counter-current" class="text-white font-medium"
+                  >01</span
                 >
-                  Portfolio
-                </a>
-                <!-- Kontakt -->
-                <a
-                  class="mx-2 lg:ml-6 my-1 text-2xl hover:text-blue-800"
-                  href="#kontakt"
+                <span class="text-gray-500">/</span>
+                <span class="text-gray-500">06</span>
+              </div>
+              <div class="flex items-center space-x-3">
+                <button
+                  id="hero-prev"
+                  aria-label="Poprzedni slajd"
+                  class="w-9 h-9 rounded-full border border-white/30 flex items-center justify-center hover:border-brand-gold hover:text-brand-gold transition-colors"
                 >
-                  Kontakt
-                </a>
-                <!-- Numer telefonu -->
-                <div class="lg:ml-6 py-4 justify-center flex">
-                  <a
-                    id="phoneBtn"
-                    href="tel:+48696426365"
-                    class="inline-flex border-2 bg-blue-50/30 border-blue-900 rounded-full text-blue-900 font-medium overflow-visible justify-between w-52 h-12 items-center"
-                  >
-                    <div class="text-center h-8 w-full font-bold text-2xl">
-                      696 426 365
-                    </div>
-                    <div
-                      class="phone-icon flex items-center justify-center bg-blue-900 text-blue-300 rounded-full w-11 my-0.5 mr-0.5 aspect-square"
-                    >
-                      <i class="fa-solid fa-phone text-lg"></i>
-                    </div>
-                  </a>
-                </div>
+                  <span class="text-base">←</span>
+                </button>
+                <button
+                  id="hero-next"
+                  aria-label="Następny slajd"
+                  class="w-9 h-9 rounded-full border border-white/30 flex items-center justify-center hover:border-brand-gold hover:text-brand-gold transition-colors"
+                >
+                  <span class="text-base">→</span>
+                </button>
+              </div>
+            </div>
+          </div>
 
-                <!-- Przycisk zmiany języka (desktop) -->
-                <div class="ml-6 py-4 justify-center hidden lg:flex">
-                  <a
-                    id="langBtn"
-                    href="/en/"
-                    class="inline-flex border-2 border-blue-900 bg-blue-50/30 rounded-full text-blue-900 font-medium overflow-visible justify-center w-20 h-9 items-center transition-colors duration-300"
-                  >
-                    <div class="text-center font-bold text-xl">EN</div>
-                  </a>
-                </div>
+          <!-- Right: Vertical Category Menu & NAVORA Card -->
+          <div
+            class="lg:col-span-4 hidden lg:flex flex-col space-y-4 reveal-item revealed reveal-delay-200"
+          >
+            <div class="space-y-3 text-right">
+              <a
+                href="/pl/realizacje/?cat=apartamenty"
+                class="block text-xs uppercase tracking-[0.2em] font-medium text-gray-300 hover:text-brand-gold transition-colors py-1 border-r-2 border-gray-300 hover:border-brand-gold pr-2 text-shadow-lg/30"
+              >
+                APARTAMENTY <br />
+                I REZYDENCJE
+              </a>
+              <a
+                href="/pl/realizacje/?cat=komercyjne"
+                class="block text-xs uppercase tracking-[0.2em] font-medium text-gray-300 hover:text-brand-gold transition-colors py-1 border-r-2 border-gray-300 hover:border-brand-gold pr-2 text-shadow-lg/30"
+              >
+                WNĘTRZA <br />
+                KOMERCYJNE
+              </a>
+              <a
+                href="/pl/realizacje/?cat=medyczne"
+                class="block text-xs uppercase tracking-[0.2em] font-medium text-gray-300 hover:text-brand-gold transition-colors py-1 border-r-2 border-gray-300 hover:border-brand-gold pr-2 text-shadow-lg/30"
+              >
+                KLINIKI I PRZESTRZENIE <br />
+                MEDYCZNE
+              </a>
+              <a
+                href="/pl/realizacje/?cat=publiczne"
+                class="block text-xs uppercase tracking-[0.2em] font-medium text-gray-300 hover:text-brand-gold transition-colors py-1 border-r-2 border-gray-300 hover:border-brand-gold pr-2 text-shadow-lg/30"
+              >
+                LOKALE USŁUGOWE <br />
+                I OBIEKTY PUBLICZNE
+              </a>
+            </div>
 
-                <!-- Przycisk zmiany języka (mobile, na dole menu) -->
+            <!-- Marine Navora Card -->
+            <div class="mt-8 pt-4">
+              <a
+                href="/pl/realizacje/?cat=stoczniowa"
+                class="group relative block overflow-hidden border border-white/15 bg-brand-navyDark/80 hover:border-brand-gold/60 transition-all duration-500 p-6"
+              >
                 <div
-                  class="lg:hidden py-4 justify-center flex mt-auto mb-20"
-                  style="z-index: 60"
+                  class="absolute inset-0 opacity-40 group-hover:opacity-60 transition-opacity"
                 >
-                  <a
-                    id="langBtnMobile"
-                    href="/en/"
-                    class="inline-flex border-2 border-blue-900 bg-blue-50/30 rounded-full text-blue-900 font-medium overflow-visible justify-center w-20 h-9 items-center transition-colors duration-300"
+                  <img
+                    src="/assets/img/marine.webp"
+                    alt="NAVORA Marine"
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+                <div class="relative z-10 space-y-2">
+                  <span
+                    class="text-[10px] tracking-[0.25em] uppercase text-gray-400 font-semibold block"
                   >
-                    <div class="text-center font-bold text-xl">EN</div>
-                  </a>
+                    BRANŻA STOCZNIOWA
+                  </span>
+                  <p class="text-xs text-gray-300 font-light">
+                    Realizacje marine
+                  </p>
+                  <div
+                    class="pt-4 flex items-center justify-between border-t border-white/10"
+                  >
+                    <div>
+                      <span
+                        class="font-serif text-lg tracking-wider text-white block"
+                        >NAVORA</span
+                      >
+                      <span
+                        class="text-[9px] tracking-widest text-brand-gold uppercase"
+                        >MARINE INTERIORS</span
+                      >
+                    </div>
+                    <span
+                      class="arrow-nudge text-white group-hover:text-brand-gold text-sm"
+                      >→</span
+                    >
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION: MATERIAŁY ==================== -->
+    <section
+      class="py-14 sm:py-20 bg-brand-cream border-t border-brand-borderLight"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-5 lg:px-6">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          <!-- Left Title & Link -->
+          <div class="lg:col-span-3 reveal-item">
+            <div
+              class="text-3xl sm:text-4xl xl:text-5xl text-gray-900 leading-[1.1]"
+            >
+              Materiały.<br />
+              <p class="text-xl sm:text-2xl">Bez kompromisów.</p>
+              <p class="text-sm sm:text-base pt-3 font-extralight">
+                Pracujemy na sprawdzonych, renomowanych materiałach, <br />
+                dobierając je do charakteru projektu i oczekiwanego efektu.
+              </p>
+            </div>
+          </div>
+
+          <!-- Right: 7 Swatches -->
+          <div class="lg:col-span-9">
+            <div
+              class="materials-grid grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-4 sm:gap-5"
+            >
+              <!-- Swatch 1 -->
+              <div class="group reveal-item cursor-pointer">
+                <div
+                  class="aspect-square bg-gray-200 overflow-hidden border border-brand-borderLight group-hover:border-brand-gold transition-colors"
+                >
+                  <img
+                    src="/assets/img/materialy/drewno.webp"
+                    alt="Drewno i forniry"
+                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+                <div class="mt-3">
+                  <h3
+                    class="text-xs font-bold uppercase tracking-wider text-gray-900"
+                  >
+                    DREWNO I FORNIRY
+                  </h3>
+                  <p class="text-[11px] text-gray-600 mt-0.5">
+                    Ponadczasowy charakter
+                  </p>
+                </div>
+              </div>
+
+              <!-- Swatch 2 -->
+              <div class="group reveal-item cursor-pointer">
+                <div
+                  class="aspect-square bg-gray-200 overflow-hidden border border-brand-borderLight group-hover:border-brand-gold transition-colors"
+                >
+                  <img
+                    src="/assets/img/materialy/plyty.webp"
+                    alt="Płyty laminowane"
+                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+                <div class="mt-3">
+                  <h3
+                    class="text-xs font-bold uppercase tracking-wider text-gray-900"
+                  >
+                    PŁYTY LAMINOWANE
+                  </h3>
+                  <p class="text-[11px] text-gray-600 mt-0.5">
+                    Funkcjonalność i różnorodność
+                  </p>
+                </div>
+              </div>
+
+              <!-- Swatch 3 -->
+              <div class="group reveal-item cursor-pointer">
+                <div
+                  class="aspect-square bg-gray-200 overflow-hidden border border-brand-borderLight group-hover:border-brand-gold transition-colors"
+                >
+                  <img
+                    src="/assets/img/materialy/kamien.webp"
+                    alt="Kamień i kompozyty"
+                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+                <div class="mt-3">
+                  <h3
+                    class="text-xs font-bold uppercase tracking-wider text-gray-900"
+                  >
+                    KAMIEŃ I KOMPOZYTY
+                  </h3>
+                  <p class="text-[11px] text-gray-600 mt-0.5">
+                    Naturalne piękno
+                  </p>
+                </div>
+              </div>
+
+              <!-- Swatch 4 -->
+              <div class="group reveal-item cursor-pointer">
+                <div
+                  class="aspect-square bg-gray-200 overflow-hidden border border-brand-borderLight group-hover:border-brand-gold transition-colors"
+                >
+                  <img
+                    src="/assets/img/materialy/spieki.webp"
+                    alt="Spieki"
+                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+                <div class="mt-3">
+                  <h3
+                    class="text-xs font-bold uppercase tracking-wider text-gray-900"
+                  >
+                    SPIEKI
+                  </h3>
+                  <p class="text-[11px] text-gray-600 mt-0.5">
+                    Wyjątkowa wytrzymałość
+                  </p>
+                </div>
+              </div>
+
+              <!-- Swatch 5 -->
+              <div class="group reveal-item cursor-pointer">
+                <div
+                  class="aspect-square bg-gray-200 overflow-hidden border border-brand-borderLight group-hover:border-brand-gold transition-colors"
+                >
+                  <img
+                    src="/assets/img/materialy/corian.webp"
+                    alt="Corian"
+                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+                <div class="mt-3">
+                  <h3
+                    class="text-xs font-bold uppercase tracking-wider text-gray-900"
+                  >
+                    CORIAN®
+                  </h3>
+                  <p class="text-[11px] text-gray-600 mt-0.5">
+                    Higiena i nowoczesny design
+                  </p>
+                </div>
+              </div>
+
+              <!-- Swatch 6 -->
+              <div class="group reveal-item cursor-pointer">
+                <div
+                  class="aspect-square bg-gray-200 overflow-hidden border border-brand-borderLight group-hover:border-brand-gold transition-colors"
+                >
+                  <img
+                    src="/assets/img/materialy/metal.webp"
+                    alt="Stal, szkło i metal"
+                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+                <div class="mt-3">
+                  <h3
+                    class="text-xs font-bold uppercase tracking-wider text-gray-900"
+                  >
+                    STAL, SZKŁO I METAL
+                  </h3>
+                  <p class="text-[11px] text-gray-600 mt-0.5">
+                    Nowoczesne detale
+                  </p>
+                </div>
+              </div>
+
+              <!-- Swatch 7 -->
+              <div class="group reveal-item cursor-pointer">
+                <div
+                  class="aspect-square bg-gray-200 overflow-hidden border border-brand-borderLight group-hover:border-brand-gold transition-colors"
+                >
+                  <img
+                    src="/assets/img/materialy/tkaniny.webp"
+                    alt="Tkaniny i tapicerka"
+                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+                <div class="mt-3">
+                  <h3
+                    class="text-xs font-bold uppercase tracking-wider text-gray-900"
+                  >
+                    TKANINY I TAPICERKA
+                  </h3>
+                  <p class="text-[11px] text-gray-600 mt-0.5">
+                    Komfort i indywidualny styl
+                  </p>
                 </div>
               </div>
             </div>
           </div>
-        </nav>
+        </div>
       </div>
-    </div>
+    </section>
 
-    <!-- Treść główna -->
-    <main class="z-20 w-full">
-      <!-- Sekcja głowna-->
-      <section class="relative h-screen w-full overflow-hidden">
-        <!-- Wideo w tle -->
-        <video
-          autoplay
-          muted
-          loop
-          playsinline
-          class="absolute top-0 left-0 w-full h-full object-cover"
-        >
-          <source src="/assets/vid/vid1.mp4" type="video/mp4" />
-        </video>
+    <!-- ==================== SECTION: WŁASNA PRODUKCJA ==================== -->
+    <section
+      id="produkcja"
+      class="py-16 sm:py-20 bg-brand-charcoal text-white relative"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div class="lg:col-span-4 space-y-5 reveal-item">
+            <span
+              class="text-[11px] uppercase tracking-[0.25em] text-brand-gold font-semibold block"
+            >
+              WŁASNA PRODUKCJA
+            </span>
+            <h2
+              class="font-serif text-3xl sm:text-4xl xl:text-5xl font-normal leading-[1.1]"
+            >
+              Meble i zabudowy<br />tworzone na wymiar.
+            </h2>
+            <p
+              class="text-gray-300 text-sm font-light max-w-sm leading-relaxed"
+            >
+              Łączymy rzemiosło, nowoczesny park maszynowy i doświadczony zespół
+              stolarzy, tapicerów i montażystów. Realizujemy kompleksowo – od
+              dokumentacji technicznej po gotowy montaż u klienta.
+            </p>
+            <div>
+              <a
+                href="/pl/o-nas/"
+                class="group inline-flex items-center space-x-3 px-6 py-3.5 border border-white/25 hover:border-brand-gold text-xs uppercase tracking-[0.18em] font-medium transition-all"
+              >
+                <span>POZNAJ NASZĄ PRODUKCJĘ</span>
+                <span class="arrow-nudge text-brand-gold">→</span>
+              </a>
+            </div>
+          </div>
 
-        <!-- Nakładka blur + gradient -->
-        <div
-          class="absolute inset-0 bg-gradient-to-b from-brown-950/50 via-brown-950/50 to-blue-100 backdrop-blur-sm"
-        ></div>
-
-        <!-- Hero / Tekst na wideo -->
-        <div
-          class="relative z-20 h-full text-white py-16 content-end w-screen pl-[7.5%] pb-[40%] sm:pb-[30%] md:pb-[20%] lg:pb-[7.5%]"
-        >
-          <div class="bottom-0 left-0 flex flex-col gap-4">
-            <!-- STOLARNIA I TAPICERNIA -->
+          <!-- 3 Production Cards -->
+          <div
+            class="lg:col-span-8 grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-5 h-full"
+          >
+            <!-- Card 1: Stolarnia -->
             <div
-              id="stolarniaContainer"
-              class="opacity-0 translate-y-4 fade-up"
+              class="group relative overflow-hidden bg-brand-dark border border-white/10 card-border-glow reveal-item reveal-delay-100"
             >
-              <div class="relative inline-block w-fit mb-2">
-                <div
-                  class="relative z-10 flex items-center border-white/70 text-white backdrop-blur-md bg-black/20 px-2 py-1 rounded-full font-semibold text-xs lg:text-sm xl:text-base"
+              <div class="h-full overflow-hidden zoom-card">
+                <img
+                  src="/assets/img/stolarnia.webp"
+                  alt="Stolarnia KROFFT"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div
+                class="absolute inset-x-0 bottom-0 p-4 sm:p-5 bg-linear-to-t from-black/90 via-black/70 to-black/25 space-y-1"
+              >
+                <h3
+                  class="font-serif text-lg sm:text-xl font-normal tracking-wide text-white group-hover:text-brand-gold transition-colors"
                 >
-                  <div class="relative w-3 h-3 mr-2">
-                    <span
-                      class="absolute left-1/2 top-1/2 w-5 h-5 bg-white rounded-full opacity-30 animate-ripple"
-                      style="transform: translate(-50%, -50%) scale(0)"
-                    ></span>
-                    <div class="w-3 h-3 bg-white/70 rounded-full"></div>
-                  </div>
-                  STOLARNIA I TAPICERNIA
-                </div>
+                  STOLARNIA
+                </h3>
+                <p class="text-xs text-gray-200 font-light leading-relaxed">
+                  Precyzyjna obróbka, najwyższa powtarzalność.
+                </p>
               </div>
             </div>
 
-            <!-- Nagłówek -->
-            <div id="headlineContainer" class="flex flex-col gap-2">
-              <div
-                class="h-20 lg:h-auto text-4xl lg:text-5xl xl:text-6xl flex flex-col lg:flex-row font-semibold gap-x-2 w-[92.5%] drop-shadow-[0_0px_8px_rgba(0,0,0,1)]"
-              >
-                <span id="firstPart" class="fade-up"
-                  >Tworzymy&nbsp;z&nbsp;pasją,</span
-                >
-                <span id="secondPart" class="fade-up"
-                  >dbając&nbsp;o&nbsp;detale.</span
-                >
+            <!-- Card 2: Tapicernia -->
+            <div
+              class="group relative overflow-hidden bg-brand-dark border border-white/10 card-border-glow reveal-item reveal-delay-200"
+            >
+              <div class="h-full overflow-hidden zoom-card">
+                <img
+                  src="/assets/img/tapicernia.webp"
+                  alt="Tapicernia KROFFT"
+                  class="w-full h-full object-cover"
+                />
               </div>
-
-              <!-- Podtytuł -->
               <div
-                id="subTitle"
-                class="text-lg lg:text-xl xl:text-2xl w-[92.5%] py-4 lg:py-6 drop-shadow-[0_0px_4px_rgba(0,0,0,1)] opacity-0 translate-y-4 fade-up"
+                class="absolute inset-x-0 bottom-0 p-4 sm:p-5 bg-linear-to-t from-black/90 via-black/70 to-black/25 space-y-1"
               >
-                Tworzymy z pasją. Projektujemy z precyzją. Realizujemy z klasą.
+                <h3
+                  class="font-serif text-lg sm:text-xl font-normal tracking-wide text-white group-hover:text-brand-gold transition-colors"
+                >
+                  TAPICERNIA
+                </h3>
+                <p class="text-xs text-gray-200 font-light leading-relaxed">
+                  Indywidualne rozwiązania, najwyższy komfort.
+                </p>
               </div>
             </div>
 
-            <!-- Button -->
-            <a
-              id="ctaButton"
-              href="#kontakt"
-              class="group relative inline-flex items-center justify-center gap-3 w-fit rounded-full pl-6 pr-3 py-3 border-2 border-white/70 text-white backdrop-blur-md bg-black/20 overflow-hidden opacity-0 translate-y-4 fade-up"
+            <!-- Card 3: Montaż -->
+            <div
+              class="group relative overflow-hidden bg-brand-dark border border-white/10 card-border-glow reveal-item reveal-delay-300"
+            >
+              <div class="h-full overflow-hidden zoom-card">
+                <img
+                  src="/assets/img/montaz.webp"
+                  alt="Montaż mebli na wymiar"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div
+                class="absolute inset-x-0 bottom-0 p-4 sm:p-5 bg-linear-to-t from-black/90 via-black/70 to-black/25 space-y-1"
+              >
+                <h3
+                  class="font-serif text-lg sm:text-xl font-normal tracking-wide text-white group-hover:text-brand-gold transition-colors"
+                >
+                  MONTAŻ
+                </h3>
+                <p class="text-xs text-gray-200 font-light leading-relaxed">
+                  Perfekcyjne wykończenie w każdym elemencie.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION: WYBRANE REALIZACJE (Image 1) ==================== -->
+    <section
+      class="py-14 sm:py-24 lg:py-32 bg-brand-cream border-t border-brand-borderLight"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Section Header -->
+        <div
+          class="flex items-center justify-between mb-12 sm:mb-16 reveal-item"
+        >
+          <span
+            class="text-xs uppercase tracking-[0.25em] text-gray-600 font-semibold"
+          >
+            WYBRANE REALIZACJE
+          </span>
+          <a
+            href="/pl/realizacje/"
+            class="group inline-flex items-center space-x-2 text-xs uppercase tracking-[0.2em] font-semibold text-gray-900 hover:text-brand-gold transition-colors"
+          >
+            <span>ZOBACZ WSZYSTKIE</span>
+            <span class="arrow-nudge">→</span>
+          </a>
+        </div>
+
+        <!-- 3 Showcase Project Cards -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Project 1 -->
+          <a
+            href="/pl/realizacje/?cat=apartamenty"
+            class="group relative block overflow-hidden bg-black card-border-glow reveal-item reveal-delay-100"
+          >
+            <div class="aspect-4/3 overflow-hidden zoom-card">
+              <img
+                src="/assets/img/realizacje/apartament-starowiejska/1.webp"
+                alt="Apartamenty i rezydencje"
+                class="w-full h-full object-cover filter brightness-90 group-hover:brightness-100"
+              />
+            </div>
+            <div
+              class="absolute inset-x-0 bottom-0 p-4 bg-linear-to-t from-black/90 via-black/50 to-transparent flex items-center justify-between"
             >
               <span
-                class="relative z-20 font-medium text-base font-semibold xl:text-xl transition-colors duration-500 group-hover:text-[#2c2e83]"
-                >Zapytaj o wycenę</span
+                class="text-[11px] sm:text-xs uppercase tracking-wider text-white font-medium group-hover:text-brand-gold transition-colors"
               >
-              <span
-                class="relative z-20 flex items-center justify-center w-9 h-9 rounded-full bg-white"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  class="w-4 h-4 text-[#2c2e83] transition-transform duration-500 ease-out transform rotate-[-45deg] group-hover:rotate-0"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M14 5l7 7m0 0l-7 7m7-7H3"
-                  />
-                </svg>
+                APARTAMENTY I REZYDENCJE
               </span>
+              <span class="arrow-nudge text-white text-xs">→</span>
+            </div>
+          </a>
+
+          <!-- Project 2 -->
+          <a
+            href="/pl/realizacje/?cat=komercyjne"
+            class="group relative block overflow-hidden bg-black card-border-glow reveal-item reveal-delay-200"
+          >
+            <div class="aspect-4/3 overflow-hidden zoom-card">
+              <img
+                src="/assets/img/realizacje/realizacja-komercyjna-barber-pruszcz-gdanski/1.webp"
+                alt="Wnętrza komercyjne"
+                class="w-full h-full object-cover filter brightness-90 group-hover:brightness-100"
+              />
+            </div>
+            <div
+              class="absolute inset-x-0 bottom-0 p-4 bg-linear-to-t from-black/90 via-black/50 to-transparent flex items-center justify-between"
+            >
               <span
-                class="absolute w-0 h-0 rounded-full bg-white transition-all duration-700 ease-out group-hover:w-[550px] group-hover:h-[550px]"
-                style="
-                  top: 50%;
-                  left: calc(100% - 2.25rem);
-                  transform: translate(-50%, -50%);
-                "
-              ></span>
+                class="text-[11px] sm:text-xs uppercase tracking-wider text-white font-medium group-hover:text-brand-gold transition-colors"
+              >
+                WNĘTRZA KOMERCYJNE
+              </span>
+              <span class="arrow-nudge text-white text-xs">→</span>
+            </div>
+          </a>
+
+          <!-- Project 3 -->
+          <a
+            href="/pl/realizacje/?cat=drzwi"
+            class="group relative block overflow-hidden bg-black card-border-glow reveal-item reveal-delay-300"
+          >
+            <div class="aspect-4/3 overflow-hidden zoom-card">
+              <img
+                src="/assets/img/realizacje/drzwi/1.webp"
+                alt="Drzwi i zabudowy na wymiar"
+                class="w-full h-full object-cover filter brightness-90 group-hover:brightness-100"
+              />
+            </div>
+            <div
+              class="absolute inset-x-0 bottom-0 p-4 bg-linear-to-t from-black/90 via-black/50 to-transparent flex items-center justify-between"
+            >
+              <span
+                class="text-[11px] sm:text-xs uppercase tracking-wider text-white font-medium group-hover:text-brand-gold transition-colors"
+              >
+                DRZWI I ZABUDOWY
+              </span>
+              <span class="arrow-nudge text-white text-xs">→</span>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION: NASZ PROCES (Image 1) ==================== -->
+    <section
+      class="py-14 sm:py-24 lg:py-32 bg-white border-t border-brand-borderLight"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div
+          class="grid grid-cols-1 xl:grid-cols-12 gap-10 xl:gap-8 2xl:gap-12 items-start"
+        >
+          <!-- Left: Process Heading -->
+          <div class="space-y-4 reveal-item xl:col-span-3">
+            <span
+              class="text-[11px] uppercase tracking-[0.25em] text-gray-500 font-semibold block"
+            >
+              NASZ PROCES
+            </span>
+            <h2
+              class="font-serif text-2xl sm:text-4xl xl:text-4xl 2xl:text-5xl font-normal text-gray-900 leading-[1.1]"
+            >
+              Od pomysłu<br />
+              do realizacji.
+            </h2>
+            <div class="pt-4">
+              <a
+                href="/pl/proces/"
+                class="inline-flex items-center space-x-3 text-xs uppercase tracking-[0.2em] font-semibold text-gray-900 hover:text-brand-gold transition-colors pb-1 border-b border-gray-900 hover:border-brand-gold"
+              >
+                <span>ZOBACZ PEŁNY PROCES</span>
+                <span class="arrow-nudge">→</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right: 4 Steps + Tag -->
+          <div
+            class="grid grid-cols-1 sm:grid-cols-2 xl:col-span-9 xl:grid-cols-5 gap-8 xl:gap-5 2xl:gap-8"
+          >
+            <!-- Step 01 -->
+            <div
+              class="min-w-0 space-y-3 border-l-2 border-brand-borderLight pl-6 reveal-item reveal-delay-100"
+            >
+              <span
+                class="font-serif text-4xl sm:text-5xl text-gray-800 font-normal block"
+                >01</span
+              >
+              <h3 class="font-serif text-lg font-medium text-gray-900">
+                Konsultacja
+              </h3>
+              <p class="text-xs text-gray-600 font-light leading-relaxed">
+                Poznajemy potrzeby i doradzamy.
+              </p>
+            </div>
+
+            <!-- Step 02 -->
+            <div
+              class="min-w-0 space-y-3 border-l-2 border-brand-borderLight pl-6 reveal-item reveal-delay-200"
+            >
+              <span
+                class="font-serif text-4xl sm:text-5xl text-gray-800 font-normal block"
+                >02</span
+              >
+              <h3 class="font-serif text-lg font-medium text-gray-900">
+                Projekt i dokumentacja
+              </h3>
+              <p class="text-xs text-gray-600 font-light leading-relaxed">
+                Tworzymy rozwiązania dopasowane do Ciebie.
+              </p>
+            </div>
+
+            <!-- Step 03 -->
+            <div
+              class="min-w-0 space-y-3 border-l-2 border-brand-borderLight pl-6 reveal-item reveal-delay-300"
+            >
+              <span
+                class="font-serif text-4xl sm:text-5xl text-gray-800 font-normal block"
+                >03</span
+              >
+              <h3 class="font-serif text-lg font-medium text-gray-900">
+                Produkcja
+              </h3>
+              <p class="text-xs text-gray-600 font-light leading-relaxed">
+                Własne zaplecze i kontrola jakości.
+              </p>
+            </div>
+
+            <!-- Step 04 -->
+            <div
+              class="min-w-0 space-y-3 border-l-2 border-brand-borderLight pl-6 reveal-item reveal-delay-400"
+            >
+              <span
+                class="font-serif text-4xl sm:text-5xl text-gray-800 font-normal block"
+                >04</span
+              >
+              <h3 class="font-serif text-lg font-medium text-gray-900">
+                Montaż
+              </h3>
+              <p class="text-xs text-gray-600 font-light leading-relaxed">
+                Dopracowujemy każdy detal.
+              </p>
+            </div>
+
+            <!-- Right Tag Box -->
+            <div
+              class="flex flex-col justify-center border-l-2 border-brand-gold/40 pl-6 reveal-item reveal-delay-500 sm:col-span-2 xl:col-span-1"
+            >
+              <span
+                class="text-[10px] uppercase tracking-[0.16em] text-gray-500 font-semibold leading-relaxed"
+              >
+                KOMPLEKSOWO.<br />
+                NA KAŻDYM<br />
+                ETAPIE.
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== FOOTER (All Images) ==================== -->
+    <footer
+      class="bg-brand-navy text-white pt-12 sm:pt-16 lg:pt-20 pb-8 sm:pb-10 lg:pb-12 border-t border-brand-navyLight"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-8 lg:gap-y-10 pb-10 sm:pb-12 lg:pb-16 border-b border-white/10 items-start"
+        >
+          <!-- Col 1: Logo -->
+          <div class="min-w-0 space-y-2">
+            <a href="/pl/" class="inline-flex flex-col items-center">
+              <span
+                class="font-serif text-4xl text-white font-medium w-full text-center block"
+                >K R O F F T</span
+              >
+              <span
+                class="whitespace-nowrap text-[10px] tracking-[0.3em] text-gray-300 uppercase font-sans"
+              >
+                — MEBLE NA WYMIAR —
+              </span>
             </a>
           </div>
-        </div>
 
-        <style>
-          /* Ripple */
-          @keyframes ripple {
-            0% {
-              transform: translate(-50%, -50%) scale(0);
-              opacity: 0.4;
-            }
-            80%,
-            100% {
-              transform: translate(-50%, -50%) scale(2);
-              opacity: 0;
-            }
-          }
-          .animate-ripple {
-            animation: ripple 1.5s ease-out infinite;
-          }
-
-          /* Fade-up animacja */
-          .fade-up {
-            opacity: 0;
-            transform: translateY(1rem);
-            transition: all 0.5s ease-out;
-          }
-          .fade-up.show {
-            opacity: 1;
-            transform: translateY(0);
-          }
-
-          /* Podtytuł i button */
-          #subTitle,
-          #ctaButton,
-          #stolarniaContainer {
-            transition: all 0.5s ease-out;
-          }
-        </style>
-
-        <script>
-          document.addEventListener("DOMContentLoaded", () => {
-            const firstPart = document.getElementById("firstPart");
-            const secondPart = document.getElementById("secondPart");
-            const subTitle = document.getElementById("subTitle");
-            const ctaButton = document.getElementById("ctaButton");
-            const stolarnia = document.getElementById("stolarniaContainer");
-
-            // Opóźnienie 150ms przed startem nagłówka
-            setTimeout(() => {
-              if (window.innerWidth >= 1024) {
-                // Desktop: obie części razem
-                firstPart.classList.add("show");
-                secondPart.classList.add("show");
-              } else {
-                // Mobile: krótkie opóźnienie między częściami
-                firstPart.classList.add("show");
-                setTimeout(() => secondPart.classList.add("show"), 150);
-              }
-
-              // Podtytuł, button i stolarnia razem po nagłówku
-              setTimeout(() => {
-                [subTitle, ctaButton, stolarnia].forEach((el) =>
-                  el.classList.add("show")
-                );
-              }, 400);
-            }, 150); // <-- tutaj opóźnienie ładowania nagłówka
-          });
-        </script>
-      </section>
-
-      <!-- Sekcja o nas -->
-      <section
-        id="o-nas"
-        class="scroll-mt-10 lg:scroll-mt-14 p-8 pb-20 flex flex-col"
-      >
-        <!-- Opis -->
-        <div class="w-full">
-          <div class="xl:w-[80%] m-auto">
-            <div
-              class="bg-blue-900 text-blue-100 text-sm lg:text-base font-semibold w-fit px-2 p-1 rounded-full animate-fadeInUp mb-2 left-0 lg:block hidden"
-            >
-              O nas
-            </div>
-          </div>
-          <div class="flex justify-center xl:w-[80%] mx-auto">
-            <div
-              class="grid grid-cols-1 lg:grid-cols-2 gap-5 w-full max-w-[750px] lg:max-w-full"
-            >
-              <uno class="max-w-[750px] lg:max-w-1/2">
-                <div
-                  class="bg-blue-900 text-blue-100 text-sm lg:text-base font-semibold w-fit px-2 p-1 rounded-full animate-fadeInUp mb-2 left-0 block lg:hidden"
-                >
-                  O nas
-                </div>
-                <p class="text-lg lg:text-xl mb-3 animate-fadeInUp">
-                  <b>KROFFT</b> to kilkuosobowa pracownia stolarsko-tapicerska.
-                  Łączymy rzemieślniczą precyzję z kreatywnym podejściem do
-                  designu. Oferujemy zarówno klasyczne, jak i nowoczesne
-                  rozwiązania na wymiar, wykorzystując wyłącznie wysokiej
-                  jakości materiały. Działamy na terenie Polski północnej.
-                </p>
-                <p class="text-lg lg:text-xl mb-3 animate-fadeInUp">
-                  Obsługujemy klientów indywidualnych, firmy oraz podmioty z
-                  branży stoczniowej. Naszym celem jest dostarczenie mebli i
-                  tapicerek trwałych, estetycznych i idealnie dopasowanych do
-                  każdego wnętrza.
-                </p>
-              </uno>
-              <dos class="max-w-[750px] lg:max-w-1/2">
-                <h3 class="mb-2">
-                  <p class="text-xl lg:text-2xl font-bold animate-fadeInUp">
-                    Nasza specjalizacja:
-                  </p>
-                  <ul
-                    class="flex flex-wrap pl-6 text-lg lg:text-xl font-normal list-disc"
-                  >
-                    <li class="animate-fadeInUp">
-                      Produkcja szeroko pojętej <b>stolarki meblowej.</b>
-                    </li>
-                    <li class="animate-fadeInUp">
-                      Kompleksowe realizacje połączone z elementami wykończenia
-                      takimi jak:
-                      <b
-                        >lustra, blaty kamienne, spieki kwarcowe, coriany,
-                        konstrukcje ze stali malowanej proszkowo.</b
-                      >
-                    </li>
-                    <li class="animate-fadeInUp">
-                      <b>Tapicerowanie mebli</b> – nowe realizacje oraz
-                      renowacje.
-                    </li>
-
-                    <li class="animate-fadeInUp">
-                      Realizacje kontraktowe dla
-                      <b
-                        >powierzchni komercyjnych, placówek oświatowych,
-                        apartamentów z wykończeniem „pod klucz”</b
-                      >.
-                    </li>
-                  </ul>
-                </h3>
-              </dos>
-            </div>
-          </div>
-          <div class="flex justify-center xl:w-[80%] mx-auto">
-            <div
-              class="w-full max-w-[750px] lg:max-w-full flex flex-col justify-start"
-            >
-              <h2
-                class="text-2xl lg:text-3xl font-semibold mt-10 mb-4 text-blue-900 animate-fadeInUp"
-              >
-                Czym się wyróżniamy?
-              </h2>
-
-              <div class="grid grid-cols-1 lg:grid-cols-2 gap-5 w-full">
-                <!-- 1 -->
-                <div class="animate-fadeInUp">
-                  <button
-                    class="flex items-center justify-between gap-4 w-full p-3 rounded-xl hover:bg-blue-200/75 transition-colors duration-300 ease-in-out"
-                    onclick="toggleAccordion(this)"
-                  >
-                    <div class="flex items-center gap-3 text-left">
-                      <img
-                        src="/assets/img/icons/handshake-64.png"
-                        alt="Ikona jakości"
-                        class="w-8 h-8 lg:w-10 lg:h-10 xl:w-11 xl:h-11 object-contain"
-                        style="
-                          filter: invert(15%) sepia(60%) saturate(2500%)
-                            hue-rotate(205deg) brightness(85%) contrast(95%);
-                        "
-                      />
-                      <p class="text-base lg:text-lg xl:text-xl font-medium">
-                        Indywidualne podejście do klienta
-                      </p>
-                    </div>
-                    <svg
-                      class="w-5 h-5 flex-shrink-0 transition-transform duration-300"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      viewBox="0 0 24 24"
-                    >
-                      <path d="M19 9l-7 7-7-7" />
-                    </svg>
-                  </button>
-                  <div
-                    class="accordion-content max-h-0 overflow-hidden opacity-0 transition-all duration-500 ease-in-out text-blue-950 text-sm lg:text-base xl:text-lg"
-                  >
-                    <div class="pt-2">
-                      Bezpłatnie oraz niezobowiązująco przygotujemy Ci kosztorys
-                      realizacji wszystkich prac z dokładnym wyszczególnieniem
-                      kosztów. W pracowni Krofft każdy klient jest traktowany w
-                      indywidualny sposób. Pragniemy sprostać nawet najbardziej
-                      nieoczywistym i wymagającym rozwiązaniom.
-                    </div>
-                  </div>
-                </div>
-
-                <!-- 2 -->
-                <div class="animate-fadeInUp">
-                  <button
-                    class="flex items-center justify-between gap-4 w-full p-3 rounded-xl hover:bg-blue-200/75 transition-colors duration-300 ease-in-out"
-                    onclick="toggleAccordion(this)"
-                  >
-                    <div class="flex items-center gap-3 text-left">
-                      <img
-                        src="/assets/img/icons/wallet-64.png"
-                        alt="Ikona jakości"
-                        class="w-8 h-8 lg:w-10 lg:h-10 xl:w-11 xl:h-11 object-contain"
-                        style="
-                          filter: invert(15%) sepia(60%) saturate(2500%)
-                            hue-rotate(205deg) brightness(85%) contrast(95%);
-                        "
-                      />
-                      <p class="text-base lg:text-lg xl:text-xl font-medium">
-                        Komfort i bezpieczeństwo transakcji
-                      </p>
-                    </div>
-                    <svg
-                      class="w-5 h-5 flex-shrink-0 transition-transform duration-300"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      viewBox="0 0 24 24"
-                    >
-                      <path d="M19 9l-7 7-7-7" />
-                    </svg>
-                  </button>
-                  <div
-                    class="accordion-content max-h-0 overflow-hidden opacity-0 transition-all duration-500 ease-in-out text-blue-950 text-sm lg:text-base xl:text-lg"
-                  >
-                    <div class="pt-2">
-                      Krofft oferuje Ci gwarancję ceny. Podpisując umowę
-                      omawiamy ostateczną kwotę za kompleksową realizację, która
-                      jest wiążąca dla obu stron. Płatność jest realizowana w
-                      transzach odpowiadających konkretnemu etapowi realizacji
-                      prac.
-                    </div>
-                  </div>
-                </div>
-
-                <!-- 3 -->
-                <div class="animate-fadeInUp">
-                  <button
-                    class="flex items-center justify-between gap-4 w-full p-3 rounded-xl hover:bg-blue-200/75 transition-colors duration-300 ease-in-out"
-                    onclick="toggleAccordion(this)"
-                  >
-                    <div class="flex items-center gap-3 text-left">
-                      <img
-                        src="/assets/img/icons/callendar-64.png"
-                        alt="Ikona jakości"
-                        class="w-8 h-8 lg:w-10 lg:h-10 xl:w-11 xl:h-11 object-contain"
-                        style="
-                          filter: invert(15%) sepia(60%) saturate(2500%)
-                            hue-rotate(205deg) brightness(85%) contrast(95%);
-                        "
-                      />
-                      <p class="text-base lg:text-lg xl:text-xl font-medium">
-                        Terminowość i elastyczność we współpracy
-                      </p>
-                    </div>
-                    <svg
-                      class="w-5 h-5 flex-shrink-0 transition-transform duration-300"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      viewBox="0 0 24 24"
-                    >
-                      <path d="M19 9l-7 7-7-7" />
-                    </svg>
-                  </button>
-                  <div
-                    class="accordion-content max-h-0 overflow-hidden opacity-0 transition-all duration-500 ease-in-out text-blue-950 text-sm lg:text-base xl:text-lg"
-                  >
-                    <div class="pt-2">
-                      Gwarantujemy Ci termin ustalony w umowie. Podczas całego
-                      procesu realizacji masz z nami kontakt, będąc na bieżąco z
-                      postępem prac. Masz nowy pomysł? Coś jednak w ostatniej
-                      chwili uległo zmianie i ma wyglądać inaczej? Jesteśmy
-                      gotowi Ci pomóc — Twoja opinia jest dla nas ważna.
-                    </div>
-                  </div>
-                </div>
-
-                <!-- 4 -->
-                <div class="animate-fadeInUp">
-                  <button
-                    class="flex items-center justify-between gap-4 w-full p-3 rounded-xl hover:bg-blue-200/75 transition-colors duration-300 ease-in-out"
-                    onclick="toggleAccordion(this)"
-                  >
-                    <div class="flex items-center gap-3 text-left">
-                      <img
-                        src="/assets/img/icons/quality-64.png"
-                        alt="Ikona jakości"
-                        class="w-8 h-8 lg:w-10 lg:h-10 xl:w-11 xl:h-11 object-contain"
-                        style="
-                          filter: invert(15%) sepia(60%) saturate(2500%)
-                            hue-rotate(205deg) brightness(85%) contrast(95%);
-                        "
-                      />
-                      <p class="text-base lg:text-lg xl:text-xl font-medium">
-                        Gwarancja jakości
-                      </p>
-                    </div>
-                    <svg
-                      class="w-5 h-5 flex-shrink-0 transition-transform duration-300"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      viewBox="0 0 24 24"
-                    >
-                      <path d="M19 9l-7 7-7-7" />
-                    </svg>
-                  </button>
-                  <div
-                    class="accordion-content max-h-0 overflow-hidden opacity-0 transition-all duration-500 ease-in-out text-blue-950 text-sm lg:text-base xl:text-lg"
-                  >
-                    <div class="pt-2">
-                      Zadowolenie klienta jest naszym priorytetem. Pracujemy
-                      tylko na wysokiej jakości materiałach sprawdzonych marek,
-                      dzięki czemu możemy zagwarantować wieloletnią trwałość
-                      inwestycji.
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Sekcja oferta -->
-      <section
-        id="oferta"
-        class="scroll-mt-10 lg:scroll-mt-14 flex flex-col items-center bg-brown-300 pb-20"
-      >
-        <div
-          class="bg-brown-900 text-white text-sm lg:text-base font-semibold w-fit px-2 p-1 rounded-full mt-10 animate-fadeInUp"
-        >
-          Oferta
-        </div>
-        <h2
-          class="text-3xl lg:text-4xl font-semibold mb-10 text-brown-900 animate-fadeInUp"
-        >
-          Czym się zajmujemy?
-        </h2>
-
-        <div
-          class="flex flex-col lg:flex-row justify-evenly items-center h-full"
-        >
-          <!-- ===================== MEBLE NA WYMIAR ===================== -->
+          <!-- Col 2: Contact Details -->
           <div
-            id="meble-na-wymiar"
-            class="scroll-mt-14 lg:scroll-mt-16 bg-brown-600 text-white rounded-lg shadow-lg m-4 p-6 w-3/4 lg:w-1/3 hover:scale-105 transition-transform duration-300"
+            class="min-w-0 space-y-3 text-xs sm:text-sm text-gray-300 font-light"
           >
-            <img
-              src="/assets/img/placeholder.png"
-              class="w-full aspect-[3/2] object-center rounded-md mb-4 lazy-img"
-              data-src="/assets/img/na-wymiar-800.jpeg"
-              data-srcset="
-              /assets/img/na-wymiar-400.jpeg 400w,
-              /assets/img/na-wymiar-800.jpeg 800w
-              "
-              data-sizes="(max-width: 640px) 400px, 800px"
-              alt="Meble na wymiar"
-              loading="lazy"
-            />
-
-            <h3 class="text-2xl font-semibold my-4 h-12 flex items-center">
-              Meble na wymiar
-            </h3>
-            <p class="text-lg line-clamp-4 mb-4">
-              Tworzymy meble dopasowane do każdej przestrzeni i stylu – od
-              nowoczesnych po klasyczne. Zapewniamy pełne wsparcie projektowe
-              oraz indywidualne podejście na każdym etapie realizacji.
-            </p>
-            <div class="flex justify-end">
-              <button
-                data-modal="modal-wymiar"
-                class="bg-brown-300 text-brown-900 hover:bg-white font-semibold px-4 py-2 rounded-full transition"
+            <div class="flex items-center space-x-3">
+              <svg
+                class="w-4 h-4 text-brand-gold"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
               >
-                Czytaj więcej
-              </button>
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                />
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                />
+              </svg>
+              <span>Gdańsk, Polska</span>
             </div>
-          </div>
-
-          <!-- ===================== MEBLE MORSKIE ===================== -->
-          <div
-            id="meble-dla-branzy-stoczniowej"
-            class="scroll-mt-14 lg:scroll-mt-16 bg-brown-600 text-white rounded-lg shadow-lg m-4 p-6 w-3/4 lg:w-1/3 hover:scale-105 transition-transform duration-300"
-          >
-            <img
-              src="/assets/img/placeholder.png"
-              class="w-full aspect-[3/2] object-center rounded-md mb-4 lazy-img"
-              data-src="/assets/img/morskie-800.jpg"
-              data-srcset="
-              /assets/img/morskie-400.jpg 400w,
-              /assets/img/morskie-800.jpg 800w
-              "
-              data-sizes="(max-width: 640px) 400px, 800px"
-              alt="Meble dla branży stoczniowej"
-              loading="lazy"
-            />
-
-            <h3 class="text-2xl font-semibold my-4 h-12 flex items-center">
-              Meble dla branży stoczniowej
-            </h3>
-            <p class="text-lg line-clamp-4 mb-4">
-              Specjalizujemy się w produkcji mebli przeznaczonych do
-              zastosowania w stoczniach jachtowych i luksusowych jednostkach.
-              Nasze rozwiązania łączą funkcjonalność z eleganckim designem.
-            </p>
-            <div class="flex justify-end">
-              <button
-                data-modal="modal-morskie"
-                class="bg-brown-300 text-brown-900 hover:bg-white font-semibold px-4 py-2 rounded-full transition"
+            <div class="flex items-center space-x-3">
+              <svg
+                class="w-4 h-4 text-brand-gold"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
               >
-                Czytaj więcej
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <!-- ===================== MODALE ===================== -->
-
-        <!-- MEBLE NA WYMIAR -->
-        <div
-          id="modal-wymiar"
-          data-oferta
-          class="fixed inset-0 bg-brown-900/50 backdrop-blur-sm flex justify-center items-start sm:items-center opacity-0 pointer-events-none transition-opacity duration-300 z-50 overflow-y-auto p-4 pt-14 lg:p-6 lg:pt-20"
-        >
-          <div
-            class="relative bg-white text-brown-900 rounded-xl shadow-xl max-w-3xl w-full sm:w-11/12 p-8 transform scale-95 transition-transform duration-300 my-auto max-h-[99%] flex flex-col"
-          >
-            <button
-              class="absolute top-4 right-4 text-brown-900 hover:text-brown-600 text-3xl font-bold close-modal"
-            >
-              ×
-            </button>
-
-            <h3 class="text-xl lg:text-3xl font-semibold mb-4">
-              Meble na wymiar
-            </h3>
-
-            <div
-              class="text-base lg:text-lg space-y-4 overflow-y-auto pr-2 -mr-4 scrollbar scrollbar-thumb-brown-600 hover:scrollbar-thumb-brown-300 scrollbar-track-white"
-            >
-              <p>
-                W pracowni <b>KROFFT</b> tworzymy meble i tapicerki
-                <b>na wymiar</b> – trwałe, estetyczne i
-                <b>idealnie dopasowane do potrzeb klienta</b>. Dzięki
-                indywidualnemu podejściu, wysokiej jakości materiałom i dbałości
-                o każdy detal, dostarczamy rozwiązania, które łączą
-                funkcjonalność z ponadczasowym stylem.
-              </p>
-              <p>
-                Współpracujemy z architektami i projektantami wnętrz, pomagając
-                dobrać odpowiednie materiały, kolory i elementy wykończenia.
-                Nasze meble
-                <b
-                  >są trwałe, praktyczne i zaprojektowane tak, aby służyły przez
-                  lata</b
-                >.
-              </p>
-              <p>
-                Realizujemy projekty w każdym stylu: <b>nowoczesnym</b>,
-                <b>klasycznym</b>, <b>loftowym</b>, <b>skandynawskim</b>,
-                <b>rustykalnym</b>, dopasowując się do każdego klienta
-                indywidualnie.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- MEBLE MORSKIE -->
-        <div
-          id="modal-morskie"
-          data-oferta
-          class="fixed inset-0 bg-brown-900/50 backdrop-blur-sm flex justify-center items-start sm:items-center opacity-0 pointer-events-none transition-opacity duration-300 z-50 overflow-y-auto p-4 pt-14 lg:p-6 lg:pt-20"
-        >
-          <div
-            class="relative bg-white text-brown-900 rounded-xl shadow-xl max-w-3xl w-full sm:w-11/12 p-8 transform scale-95 transition-transform duration-300 my-auto max-h-[99%] flex flex-col"
-          >
-            <button
-              class="absolute top-4 right-4 text-brown-900 hover:text-brown-600 text-3xl font-bold close-modal"
-            >
-              ×
-            </button>
-
-            <h3 class="text-2xl lg:text-3xl font-semibold mb-4">
-              Meble dla branży stoczniowej
-            </h3>
-
-            <div
-              class="text-base lg:text-lg space-y-4 overflow-y-auto pr-2 -mr-4 scrollbar scrollbar-thumb-brown-600 hover:scrollbar-thumb-brown-300 scrollbar-track-white"
-            >
-              <p>
-                Specjalizujemy się w produkcji <b>wysokiej jakości</b> mebli
-                przeznaczonych do zastosowania w stoczniach jachtowych.
-                Oferujemy <b>kompleksowe rozwiązania</b> w zakresie zabudowy
-                wnętrz jachtów i łodzi. Współpracujemy z renomowanymi
-                stoczniami, dostarczając
-                <b>meble dostosowane do indywidualnych potrzeb</b> – zarówno w
-                produkcji seryjnej, jak i w projektach luksusowych jednostek na
-                zamówienie.
-              </p>
-              <p>
-                Realizujemy zlecenia w zakresie stolarki meblowej, obejmujące
-                zarówno elementy standardowe, jak i nietypowe. Nasze
-                doświadczenie pozwala nam tworzyć rozwiązania na miarę,
-                dopasowane do specyfiki jachtów oraz oczekiwań klientów.
-              </p>
-              <div>
-                W ramach naszych usług oferujemy także wykonanie elementów
-                wykończeniowych, takich jak:
-                <ul class="list-disc list-inside mb-4 font-bold">
-                  <li>lustra,</li>
-                  <li>blaty kamienne i spieki kwarcowe,</li>
-                  <li>elementy z Corianu,</li>
-                  <li>konstrukcje stalowe malowane proszkowo.</li>
-                </ul>
-                Dzięki temu możemy kompleksowo wyposażyć każdą jednostkę
-                pływającą w <b>spójne i trwałe</b> elementy zabudowy.
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Sekcja portfolio -->
-      <section
-        id="portfolio"
-        class="p-8 pb-14 w-full scroll-mt-10 lg:scroll-mt-14"
-      >
-        <div
-          class="bg-blue-900 text-blue-100 text-sm lg:text-base font-semibold w-fit px-2 p-1 mb-1 rounded-full animate-fadeInUp"
-        >
-          Portfolio
-        </div>
-        <h2
-          class="text-3xl lg:text-4xl font-semibold mb-8 text-blue-900 pb-4 animate-fadeInUp"
-        >
-          Zainspiruj się efektami naszej pracy!
-        </h2>
-        <section id="gallery" class="overflow-hidden -mx-8">
-          <div class="slider-container relative">
-            <div class="slider" id="slider-main"></div>
-          </div>
-        </section>
-      </section>
-
-      <!-- Modal -->
-      <div
-        id="gallery-modal"
-        class="pt-16 lg:pt-20 fixed inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-300 z-50"
-      >
-        <div
-          class="modal-content bg-white rounded-2xl p-2 max-w-6xl w-[95%] relative"
-        >
-          <div class="w-full">
-            <button
-              id="modal-close"
-              class="absolute top-1 right-3 text-gray-700 hover:text-black text-5xl items-start"
-            >
-              ×
-            </button>
-          </div>
-          <div
-            id="modal-gallery"
-            class="grid gap-4 h-full overflow-y-auto p-4 lg:-mr-[18px] scrollbar scrollbar-thumb-blue-900 hover:scrollbar-thumb-blue-600 scrollbar-track-blue-300"
-          ></div>
-        </div>
-      </div>
-
-      <section
-        id="czym-sie-wyrozniamy"
-        class="p-8 mb-10 pt-0 bg-blue-100 text-blue-900 w-full"
-      >
-        <h2
-          class="text-3xl lg:text-4xl font-semibold mb-8 text-blue-900 py-4 text-center animate-fadeInUp"
-        >
-          Dlaczego warto Nam zaufać?
-        </h2>
-        <div class="max-w-6xl mx-auto px-6">
-          <div class="grid grid-cols-2 md:grid-cols-4 gap-10 text-center">
-            <!-- 1 -->
-            <div>
-              <div
-                class="text-5xl lg:text-6xl font-semibold counter"
-                data-target="15"
-              >
-                0
-              </div>
-              <h3
-                class="h-12 lg:h-14 text-lg lg:text-xl leading-tight font-semibold mt-3 flex items-center justify-center animate-fadeInUp"
-              >
-                Lat doświadczenia
-              </h3>
-            </div>
-
-            <!-- 2 -->
-            <div>
-              <div
-                class="text-5xl lg:text-6xl font-semibold counter"
-                data-target="100"
-                data-suffix="+"
-              >
-                0+
-              </div>
-              <h3
-                class="h-12 lg:h-14 text-lg lg:text-xl leading-tight font-semibold mt-3 flex items-center justify-center animate-fadeInUp"
-              >
-                Ukończonych projektów
-              </h3>
-            </div>
-
-            <!-- 3 -->
-            <div>
-              <div
-                class="text-5xl lg:text-6xl font-semibold counter"
-                data-target="8"
-              >
-                0
-              </div>
-              <h3
-                class="h-12 lg:h-14 text-lg lg:text-xl leading-tight font-semibold mt-3 flex items-center justify-center animate-fadeInUp"
-              >
-                Specjalistów
-              </h3>
-            </div>
-
-            <!-- 4 -->
-            <div>
-              <div
-                class="text-5xl lg:text-6xl font-semibold counter"
-                data-target="100"
-                data-suffix="%"
-              >
-                0%
-              </div>
-              <h3
-                class="h-12 lg:h-14 text-lg lg:text-xl leading-tight font-semibold mt-3 flex items-center justify-center animate-fadeInUp"
-              >
-                Satysfakcji klientów
-              </h3>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Sekcja kontakt -->
-      <section id="kontakt" class="p-8 bg-blue-900 text-white w-full">
-        <div
-          class="scroll-mt-10 lg:scroll-mt-14 mb-8 flex flex-col-reverse lg:flex-row min-h-96 text-lg lg:text-xl justify-around items-center"
-        >
-          <!-- Formularz kontaktowy -->
-          <form
-            id="contactForm"
-            action="https://api.staticforms.xyz/submit"
-            method="POST"
-            class="w-full lg:w-1/3 lg:my-5 space-y-4"
-            onsubmit="return handleSubmit(event)"
-          >
-            <!-- Klucz API -->
-            <input
-              type="hidden"
-              name="apiKey"
-              value="sf_h6k47049bhn42348f5e2a0n0"
-            />
-            <input type="hidden" name="subject" value="Kontakt PL" />
-
-            <!-- Honeypot (antybot) -->
-            <input
-              type="text"
-              name="honeypot"
-              style="display: none"
-              tabindex="-1"
-              autocomplete="off"
-            />
-
-            <!-- Imię i nazwisko -->
-            <label class="flex flex-col w-full animate-fadeInUp">
-              <span class="font-semibold"
-                ><i class="fas fa-user"></i> Imię i nazwisko:</span
-              >
-              <input
-                class="bg-blue-300 text-blue-900 px-3 py-2 mt-1 rounded-md focus:ring-2 focus:ring-blue-500 outline-none"
-                type="text"
-                name="Imię i nazwisko"
-                required
-              />
-            </label>
-
-            <!-- E-mail -->
-            <label class="flex flex-col w-full animate-fadeInUp">
-              <span class="font-semibold"
-                ><i class="fas fa-at"></i> E-mail:</span
-              >
-              <input
-                class="bg-blue-300 text-blue-900 px-3 py-2 mt-1 rounded-md focus:ring-2 focus:ring-blue-500 outline-none"
-                type="email"
-                name="Email"
-                required
-              />
-            </label>
-
-            <!-- Wiadomość -->
-            <label class="flex flex-col w-full animate-fadeInUp">
-              <span class="font-semibold"
-                ><i class="fas fa-comments"></i> Wiadomość:</span
-              >
-              <textarea
-                class="bg-blue-300 text-blue-900 px-3 py-2 mt-1 rounded-md h-52 lg:h-72 focus:ring-2 focus:ring-blue-500 outline-none"
-                name="Wiadomość"
-                required
-              ></textarea>
-            </label>
-
-            <!-- Zgoda RODO -->
-            <div
-              class="flex items-start gap-2 bg-blue-300/20 border border-blue-400 rounded-md p-3 text-sm text-blue-100 animate-fadeInUp"
-            >
-              <input
-                id="rodo"
-                type="checkbox"
-                required
-                class="mt-1 accent-blue-500"
-                onchange="toggleSubmit()"
-              />
-              <label for="rodo" class="select-none">
-                Wyrażam zgodę na przetwarzanie moich danych osobowych przez
-                <strong>KROFFT Spółka z o.o.</strong>
-                w celu kontaktu w sprawie mojego zapytania oraz na przekazywanie
-                danych niezbędnych kontrahentom w zakresie realizacji usług.
-                Zapoznałem/am się z polityką prywatności.
-              </label>
-            </div>
-
-            <!-- Przycisk Wyślij -->
-            <button
-              id="submitBtn"
-              type="submit"
-              class="w-full bg-blue-400 hover:bg-blue-500 text-blue-900 font-semibold py-2 rounded-full transition disabled:opacity-50 disabled:cursor-not-allowed animate-fadeInUp"
-              disabled
-            >
-              Wyślij
-            </button>
-          </form>
-
-          <!-- Popup z potwierdzeniem -->
-          <div
-            id="successPopup"
-            class="hidden fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-blue-200 text-blue-900 rounded-xl shadow-2xl w-11/12 max-w-md p-6 z-50 opacity-0 transition-all duration-500 scale-90"
-          >
-            <div class="flex justify-between items-center mb-3">
-              <h3 class="text-xl lg:text-2xl font-bold">
-                <i class="fas fa-check-circle text-green-600"></i> Wiadomość
-                wysłana!
-              </h3>
-              <button
-                onclick="closePopup()"
-                class="text-blue-900 text-lg font-bold hover:text-red-600 transition"
-              >
-                ✕
-              </button>
-            </div>
-            <p class="text-blue-900/90 text-base lg:text-lg">
-              Dziękujemy za kontakt! Odpowiemy na Twoją wiadomość najszybciej,
-              jak to możliwe.
-            </p>
-          </div>
-
-          <!-- Tło przy popupie -->
-          <div
-            id="popupBackdrop"
-            class="hidden fixed inset-0 bg-black/50 backdrop-blur-sm z-40 opacity-0 transition-opacity duration-500"
-            onclick="closePopup()"
-          ></div>
-
-          <!-- Informacje kontaktowe -->
-          <div class="w-full lg:w-2/3 lg:pl-10 mt-6 lg:mt-0 lg:w-2/5">
-            <h2
-              class="text-3xl lg:text-4xl font-semibold mb-8 text-right animate-fadeInUp"
-            >
-              Kontakt
-              <div class="text-sm lg:text-base mt-4 animate-fadeInUp">
-                KROFFT Spółka z o.o. <br />
-                ul. Łanowa 67B<br />
-                80-777 Gdańsk <br />
-                KRS: 0001102071 | NIP: 5833507398 | REGON: 528459126
-              </div>
-            </h2>
-            <p class="text-base lg:text-lg mb-10 text-justify animate-fadeInUp">
-              Masz pytania lub chcesz omówić swój projekt? Skontaktuj się z
-              nami! Jesteśmy gotowi, aby pomóc Ci stworzyć meble idealnie
-              dopasowane do Twoich potrzeb. Zadzwoń albo napisz do nas
-              wiadomość, a my odpowiemy tak szybko, jak to możliwe.
-            </p>
-            <div
-              class="contact-buttons flex flex-row justify-evenly gap-4 mb-10 w-full"
-            >
-              <!-- Numer telefonu -->
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                />
+              </svg>
               <a
                 href="tel:+48696426365"
-                class="relative inline-flex border-4 bg-blue-50/10 border-blue-300 rounded-full text-blue-300 font-medium overflow-visible w-full h-14 px-4 flex items-center animate-fadeInUp"
+                class="hover:text-brand-gold transition-colors"
+                >+48 696 426 365</a
               >
-                <div
-                  class="text-left font-bold text-lg sm:text-xl lg:text-2xl pr-12 w-full text-center"
-                >
-                  696 426 365
-                </div>
-                <div
-                  class="absolute right-0 top-0 bottom-0 flex items-center justify-center bg-blue-300 text-blue-900 border-2 border-[#404290] rounded-full w-12 aspect-square"
-                >
-                  <i class="fa-solid fa-phone text-base sm:text-lg"></i>
-                </div>
-              </a>
-
-              <!-- Adres e-mail -->
+            </div>
+            <div class="flex items-center space-x-3">
+              <svg
+                class="w-4 h-4 text-brand-gold"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                />
+              </svg>
               <a
                 href="mailto:biuro@krofft.pl"
-                class="relative inline-flex border-4 bg-blue-50/10 border-blue-300 rounded-full text-blue-300 font-medium overflow-visible w-full h-14 px-4 flex items-center animate-fadeInUp"
+                class="hover:text-brand-gold transition-colors"
+                >biuro@krofft.pl</a
               >
-                <div
-                  class="text-left font-bold text-lg sm:text-xl lg:text-2xl pr-12 w-full text-center"
-                >
-                  biuro@krofft.pl
-                </div>
-                <div
-                  class="absolute right-0 top-0 bottom-0 flex items-center justify-center bg-blue-300 text-blue-900 border-2 border-[#404290] rounded-full w-12 aspect-square"
-                >
-                  <i class="fa-solid fa-envelope text-base sm:text-lg"></i>
-                </div>
-              </a>
-            </div>
-
-            <!-- Media społecznościowe -->
-            <div class="text-lg lg:text-xl text-center animate-fadeInUp">
-              Odwiedź nas także w mediach społecznościowych:
-              <div
-                id="social-buttons"
-                class="flex gap-4 py-6 w-full justify-evenly flex-row"
-              >
-                <!-- IG -->
-                <a
-                  href="https://www.instagram.com/krofft_wykonczenia_wnetrz/"
-                  class="social-btn relative inline-flex items-center justify-center px-6 py-3 text-xl lg:text-2xl font-semibold text-white rounded-full bg-gradient-to-r from-[#f58529] via-[#dd2a7b] to-[#8134af] bg-[length:200%_200%] bg-right-bottom hover:bg-left-top hover:scale-105 transition-all duration-500 shadow-lg animate-fadeInUp"
-                >
-                  <i class="fa-brands fa-instagram mr-2"></i> Instagram
-                </a>
-
-                <!-- FB -->
-                <a
-                  href="https://www.facebook.com/profile.php?id=61579381396598#"
-                  class="social-btn relative inline-flex items-center justify-center px-6 py-3 text-xl lg:text-2xl font-semibold text-white rounded-full bg-gradient-to-r from-[#1877F2] via-[#4267B2] to-[#0F4AB3] bg-[length:200%_200%] bg-right-bottom hover:bg-left-top hover:scale-105 transition-all duration-500 shadow-lg animate-fadeInUp"
-                >
-                  <i class="fa-brands fa-facebook-f mr-2"></i> Facebook
-                </a>
-              </div>
             </div>
           </div>
-        </div>
-      </section>
-    </main>
 
-    <!-- Stopka -->
-    <div id="stopka" class="z-40">
-      <footer
-        class="bg-blue-300 text-blue-900 mt-auto w-full bottom-0 bezzaznaczenia"
-      >
-        <div class="flex justify-around items-center px-5 py-4">
-          <div class="left-0">
-            <span id="year"></span> <span class="far fa-copyright"></span>
-            <b>KROFFT</b>
+          <!-- Col 3: Social & Button -->
+          <div class="flex min-w-0 flex-wrap items-center gap-3">
+            <!-- Facebook -->
+            <span
+              aria-label="Facebook"
+              class="w-9 h-9 p-2 border border-white/20 rounded-full flex items-center justify-center text-gray-300 hover:text-brand-gold hover:border-brand-gold transition-colors"
+              aria-hidden="true"
+            >
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                <path
+                  d="M9 8H6v4h3v12h5V12h3.642L18 8h-4V6.333C14 5.374 14.5 5 15.5 5H18V0h-3.808C10.597 0 9 1.582 9 4.615V8z"
+                />
+              </svg>
+            </span>
+            <!-- Instagram -->
+            <span
+              aria-label="Instagram"
+              class="w-9 h-9 border p-2 border-white/20 rounded-full flex items-center justify-center text-gray-300 hover:text-brand-gold hover:border-brand-gold transition-colors"
+              aria-hidden="true"
+            >
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+                />
+              </svg>
+            </span>
+            <!-- Kontakt button -->
+            <a
+              href="/pl/kontakt/"
+              class="inline-flex items-center space-x-2 px-4 py-2 border border-white/30 hover:border-brand-gold text-xs uppercase tracking-wider text-white hover:text-brand-gold transition-colors"
+            >
+              <span>KONTAKT</span>
+              <span>→</span>
+            </a>
           </div>
-          <a href="/pl/KROFFT-polityka-prywatnosci.pdf" class="right-0"
-            ><span class="fas fa-user-secret"></span> Polityka Prywatności</a
+
+          <!-- Col 4: Slogan -->
+          <div
+            class="hidden min-w-0 text-xs uppercase tracking-[0.2em] text-gray-300 font-medium lg:block lg:text-right"
           >
+            <span class="block"> TWORZYMY<br />Z MYŚLĄ O LUDZIACH. </span>
+          </div>
         </div>
-      </footer>
-    </div>
 
-    <!-- Skrypty -->
-    <script src="/assets/js/main.js" defer></script>
+        <!-- Bottom Credits -->
+        <div
+          class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-400 space-y-4 sm:space-y-0"
+        >
+          <div>© 2026 KROFFT. Wszystkie prawa zastrzeżone.</div>
+          <div
+            class="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 sm:justify-end"
+          >
+            <a
+              href="/pl/KROFFT-polityka-prywatnosci.pdf"
+              class="hover:text-white transition-colors"
+              >Polityka prywatności</a
+            >
+            <span>|</span>
+            <span class="text-gray-400">Regulamin</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ==================== CONTACT MODAL ("Porozmawiajmy") ==================== -->
+    <dialog id="contact-dialog" class="contact-modal p-0 rounded-none">
+      <div
+        class="relative bg-brand-navyDark text-white border border-brand-gold/40 max-w-xl mx-auto p-6 sm:p-10"
+      >
+        <!-- Close button -->
+        <button
+          data-close-contact-modal
+          aria-label="Zamknij modal"
+          class="absolute top-5 right-5 text-gray-400 hover:text-white transition-colors"
+        >
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        </button>
+
+        <div class="space-y-2 mb-6">
+          <span
+            class="text-[10px] tracking-[0.25em] uppercase text-brand-gold font-semibold block"
+          >
+            DARMOWA KONSULTACJA I WYCENA
+          </span>
+          <h3 class="font-serif text-2xl sm:text-3xl font-normal">
+            Porozmawiajmy o Twoim projekcie.
+          </h3>
+          <p class="text-xs text-gray-300 font-light">
+            Zostaw nam wiadomość lub dane kontaktowe – odezwiemy się w ciągu
+            24h.
+          </p>
+        </div>
+
+        <!-- Form -->
+        <form id="contact-form" class="space-y-4">
+          <div>
+            <label
+              class="block text-[11px] uppercase tracking-wider text-gray-300 mb-1"
+              >Imię i nazwisko</label
+            >
+            <input
+              type="text"
+              required
+              placeholder="Jan Kowalski"
+              class="w-full bg-brand-navy border border-white/20 px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-brand-gold transition-colors"
+            />
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label
+                class="block text-[11px] uppercase tracking-wider text-gray-300 mb-1"
+                >Telefon</label
+              >
+              <input
+                type="tel"
+                required
+                placeholder="+48 000 000 000"
+                class="w-full bg-brand-navy border border-white/20 px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-brand-gold transition-colors"
+              />
+            </div>
+            <div>
+              <label
+                class="block text-[11px] uppercase tracking-wider text-gray-300 mb-1"
+                >E-mail</label
+              >
+              <input
+                type="email"
+                required
+                placeholder="jan@example.com"
+                class="w-full bg-brand-navy border border-white/20 px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-brand-gold transition-colors"
+              />
+            </div>
+          </div>
+
+          <div>
+            <label
+              class="block text-[11px] uppercase tracking-wider text-gray-300 mb-1"
+              >Typ inwestycji</label
+            >
+            <select
+              class="w-full bg-brand-navy border border-white/20 px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-brand-gold transition-colors"
+            >
+              <option value="apartamenty">Apartament / Rezydencja</option>
+              <option value="komercyjne">Wnętrza komercyjne / Biuro</option>
+              <option value="kliniki">Klinika / Przestrzeń medyczna</option>
+              <option value="stoczniowa">Branża stoczniowa (Marine)</option>
+              <option value="inne">Inne indywidualne zamówienie</option>
+            </select>
+          </div>
+
+          <div>
+            <label
+              class="block text-[11px] uppercase tracking-wider text-gray-300 mb-1"
+              >Wiadomość / Opis projektu</label
+            >
+            <textarea
+              rows="3"
+              placeholder="Opisz krótko zakres mebli, metraż lub załącz uwagi..."
+              class="w-full bg-brand-navy border border-white/20 px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-brand-gold transition-colors"
+            ></textarea>
+          </div>
+
+          <div
+            class="flex items-start space-x-2 text-[11px] text-gray-400 pt-1"
+          >
+            <input
+              type="checkbox"
+              id="rodo"
+              required
+              class="mt-0.5 accent-brand-gold"
+            />
+            <label for="rodo"
+              >Wyrażam zgodę na przetwarzanie danych osobowych w celu kontaktu
+              ofertowego.</label
+            >
+          </div>
+
+          <button
+            type="submit"
+            class="w-full py-3.5 bg-brand-gold text-brand-navy font-semibold text-xs uppercase tracking-[0.2em] hover:bg-brand-goldHover transition-colors mt-2"
+          >
+            WYŚLIJ WIADOMOŚĆ →
+          </button>
+        </form>
+
+        <!-- Success Confirmation State -->
+        <div
+          id="contact-form-success"
+          class="hidden text-center py-8 space-y-4"
+        >
+          <div
+            class="w-12 h-12 rounded-full border-2 border-brand-gold text-brand-gold flex items-center justify-center mx-auto text-xl"
+          >
+            ✓
+          </div>
+          <h4 class="font-serif text-2xl">Dziękujemy za kontakt!</h4>
+          <p class="text-xs text-gray-300 max-w-sm mx-auto">
+            Twoja wiadomość została pomyślnie wysłana. Nasz zespół skontaktuje
+            się z Tobą w najszybszym możliwym terminie.
+          </p>
+          <button
+            data-close-contact-modal
+            class="inline-block mt-4 px-6 py-2 border border-white/30 text-xs uppercase tracking-wider text-white hover:border-brand-gold hover:text-brand-gold"
+          >
+            Zamknij okno
+          </button>
+        </div>
+      </div>
+    </dialog>
+
+    <!-- Scripts -->
+    <script src="/assets/js/main.js"></script>
   </body>
 </html>

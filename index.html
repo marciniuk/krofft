@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html class="h-full" lang="x-default">
   <head>
     <script>
@@ -25,15 +25,6 @@
 
     <!-- Linki do zasobów -->
     <link href="/assets/css/main.css" rel="stylesheet" />
-    <link
-      rel="stylesheet"
-      href="/assets/css/fontawesome.css"
-      media="print"
-      onload="this.media='all'"
-    />
-    <noscript>
-      <link rel="stylesheet" href="/assets/css/fontawesome.css" />
-    </noscript>
     <script>
       function loadFontsCSS(href) {
         const link = document.createElement("link");
@@ -60,7 +51,7 @@
     <meta property="og:url" content="https://krofft.pl" />
     <meta
       property="og:image"
-      content="https://krofft.pl/assets/img/krofft-baner.png"
+      content="https://krofft.pl/assets/img/realizacje/apartament-starowiejska/1.webp"
     />
 
     <!-- Twitter Cards -->
@@ -75,7 +66,7 @@
     />
     <meta
       name="twitter:image"
-      content="https://krofft.pl/assets/img/krofft-baner.png"
+      content="https://krofft.pl/assets/img/realizacje/apartament-starowiejska/1.webp"
     />
 
     <!-- Favicony -->
@@ -110,7 +101,7 @@
           "name": "KROFFT",
           "logo": {
             "@type": "ImageObject",
-            "url": "https://krofft.pl/assets/img/krofft-napis.png"
+            "url": "https://krofft.pl/assets/img/krofft-napis.svg"
           }
         }
         "author": {
@@ -137,7 +128,7 @@
 
   <body
     class="bg-blue-100 text-blue-900 flex flex-col min-h-full"
-    onload="loaded=true"
+    onload="loaded = true"
   >
     <!-- Treść główna -->
     <div
@@ -161,7 +152,11 @@
           <div
             class="absolute inset-0 z-0 opacity-0 transition-all duration-300 ease-out"
             style="
-              background-image: url('/assets/img/pl-200.png');
+              background-image: linear-gradient(
+                to bottom,
+                #fff 50%,
+                #dc143c 50%
+              );
               background-size: cover;
               background-position: center;
             "
@@ -172,29 +167,6 @@
             class="relative z-10 px-8 sm:px-12 md:px-16 py-3 sm:py-4 md:py-5 transition-all duration-150 ease-in"
           >
             PL
-          </div>
-        </a>
-
-        <!-- 🇬🇧 EN -->
-        <a
-          href="/en/"
-          class="relative overflow-hidden rounded-3xl font-extrabold text-base sm:text-lg md:text-xl xl:text-2xl shadow-lg bg-blue-900 hover:bg-blue-300 text-blue-300 transform transition-all duration-300 ease-out hover:scale-110 hover:shadow-xl focus:scale-105 focus:outline-none"
-        >
-          <!-- Flaga -->
-          <div
-            class="absolute inset-0 z-0 opacity-0 transition-all duration-300 ease-out"
-            style="
-              background-image: url('/assets/img/en-200.png');
-              background-size: cover;
-              background-position: center;
-            "
-          ></div>
-
-          <!-- Tekst -->
-          <div
-            class="relative z-10 px-8 sm:px-12 md:px-16 py-3 sm:py-4 md:py-5 transition-all duration-150 ease-in"
-          >
-            EN
           </div>
         </a>
       </div>

@@ -5,7 +5,7 @@
       https://krofft.pl/
     </loc>
     <lastmod>
-      2025-11-03T21:45:59.458Z
+      2026-10-17T20:34:20.228Z
     </lastmod>
     <priority>
       1.0
@@ -13,21 +13,10 @@
   </url>
   <url>
     <loc>
-      https://krofft.pl/en/
-    </loc>
-    <lastmod>
-      2025-11-03T21:53:29.136Z
-    </lastmod>
-    <priority>
-      0.8
-    </priority>
-  </url>
-  <url>
-    <loc>
       https://krofft.pl/pl/
     </loc>
     <lastmod>
-      2025-11-03T21:45:46.318Z
+      2026-10-17T20:30:52.172Z
     </lastmod>
     <priority>
       0.8
@@ -35,13 +24,68 @@
   </url>
   <url>
     <loc>
-      https://krofft.pl/en/KROFFT-privacy-policy.pdf
+      https://krofft.pl/pl/kontakt/
     </loc>
     <lastmod>
-      2025-10-30T03:38:18.000Z
+      2026-10-17T20:30:00.202Z
     </lastmod>
     <priority>
-      0.5
+      0.6
+    </priority>
+  </url>
+  <url>
+    <loc>
+      https://krofft.pl/pl/o-nas/
+    </loc>
+    <lastmod>
+      2026-10-18T10:07:44.759Z
+    </lastmod>
+    <priority>
+      0.6
+    </priority>
+  </url>
+  <url>
+    <loc>
+      https://krofft.pl/pl/oferta/
+    </loc>
+    <lastmod>
+      2026-10-18T10:11:57.932Z
+    </lastmod>
+    <priority>
+      0.6
+    </priority>
+  </url>
+  <url>
+    <loc>
+      https://krofft.pl/pl/proces/
+    </loc>
+    <lastmod>
+      2026-10-17T20:29:59.315Z
+    </lastmod>
+    <priority>
+      0.6
+    </priority>
+  </url>
+  <url>
+    <loc>
+      https://krofft.pl/pl/produkcja/
+    </loc>
+    <lastmod>
+      2026-10-18T10:14:19.767Z
+    </lastmod>
+    <priority>
+      0.6
+    </priority>
+  </url>
+  <url>
+    <loc>
+      https://krofft.pl/pl/realizacje/
+    </loc>
+    <lastmod>
+      2026-10-18T10:10:39.639Z
+    </lastmod>
+    <priority>
+      0.6
     </priority>
   </url>
   <url>
@@ -49,7 +93,7 @@
       https://krofft.pl/pl/KROFFT-polityka-prywatnosci.pdf
     </loc>
     <lastmod>
-      2025-10-30T03:38:18.000Z
+      2026-10-04T11:17:58.979Z
     </lastmod>
     <priority>
       0.5
@@ -60,7 +104,7 @@
       https://krofft.pl/404.html
     </loc>
     <lastmod>
-      2025-11-03T21:48:19.510Z
+      2026-10-17T20:29:56.107Z
     </lastmod>
     <priority>
       0.3

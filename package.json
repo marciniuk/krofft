@@ -1,7 +1,7 @@
 {
   "name": "krofft",
   "type": "module",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "",
   "main": "index.html",
   "scripts": {
@@ -16,17 +16,20 @@
   "license": "All Rights Reserved – © 2025 Maciej Czarnacki (krofft.pl) & © 2025 Adrian Marciniuk (marcini.uk)",
   "homepage": "https://krofft.pl",
   "devDependencies": {
+    "@tailwindcss/cli": "^4.3.3",
     "autoprefixer": "^10.4.21",
     "cssnano": "^7.1.1",
     "postcss": "^8.5.6",
-    "postcss-cli": "^11.0.1",
+    "postcss-cli": "^12.0.0",
     "sitemap": "^9.0.0",
-    "tailwind-scrollbar": "^3.1.0",
-    "tailwindcss": "^3.4.17",
+    "tailwind-scrollbar": "^4.0.2",
+    "tailwindcss": "^4.3.3",
     "xml-formatter": "^3.6.7"
   },
   "dependencies": {
     "@tailwindcss/postcss": "^4.1.13",
-    "tailwind-rounded-out": "^1.0.1"
+    "prettier": "^3.9.10",
+    "tailwind-rounded-out": "^2.0.0",
+    "tailwindcss-cli": "^0.1.2"
   }
 }
