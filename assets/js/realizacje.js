@@ -10,8 +10,8 @@
 
   const projects = [
     createProject({
-      slug: "apartament-chwarzno-gdynia",
-      title: "Apartament Chwarzno",
+      slug: "chwarzno-gdynia",
+      title: "Chwarzno",
       location: "GDYNIA",
       category: "apartamenty",
       categoryLabel: "Apartamenty i rezydencje",
@@ -21,8 +21,8 @@
       imageCount: 3,
     }),
     createProject({
-      slug: "apartament-grobla-gdansk",
-      title: "Apartament Grobla",
+      slug: "grobla-gdansk",
+      title: "Grobla",
       location: "GDAŃSK",
       category: "apartamenty",
       categoryLabel: "Apartamenty i rezydencje",
@@ -32,8 +32,8 @@
       imageCount: 8,
     }),
     createProject({
-      slug: "apartament-letnica-gdansk",
-      title: "Apartament Letnica",
+      slug: "letnica-gdansk",
+      title: "Letnica",
       location: "GDAŃSK",
       category: "apartamenty",
       categoryLabel: "Apartamenty i rezydencje",
@@ -42,8 +42,8 @@
       imageCount: 10,
     }),
     createProject({
-      slug: "apartament-przymorze-gdansk",
-      title: "Apartament Przymorze",
+      slug: "przymorze-gdansk",
+      title: "Przymorze",
       location: "GDAŃSK",
       category: "apartamenty",
       categoryLabel: "Apartamenty i rezydencje",
@@ -53,8 +53,8 @@
       imageCount: 6,
     }),
     createProject({
-      slug: "apartament-starowiejska",
-      title: "Apartament Starowiejska",
+      slug: "starowiejska",
+      title: "Starowiejska",
       location: "GDAŃSK",
       category: "apartamenty",
       categoryLabel: "Apartamenty i rezydencje",
@@ -64,8 +64,8 @@
       imageCount: 12,
     }),
     createProject({
-      slug: "apartament-wrzeszcz-gdansk",
-      title: "Apartament Wrzeszcz",
+      slug: "wrzeszcz-gdansk",
+      title: "Wrzeszcz",
       location: "GDAŃSK",
       category: "apartamenty",
       categoryLabel: "Apartamenty i rezydencje",
@@ -75,9 +75,9 @@
       imageCount: 9,
     }),
     createProject({
-      slug: "garderoba-apartament-gdansk-stare-miasto",
-      title: "Garderoba — Stare Miasto",
-      location: "GDAŃSK",
+      slug: "garderoba-gdansk-stare-miasto",
+      title: "Garderoba",
+      location: "GDAŃSK STARE MIASTO",
       category: "apartamenty",
       categoryLabel: "Apartamenty i rezydencje",
       description:
@@ -86,9 +86,9 @@
       imageCount: 5,
     }),
     createProject({
-      slug: "kuchnia-rezydencja-gdansk",
-      title: "Kuchnia w rezydencji",
-      location: "GDAŃSK",
+      slug: "kuchnia-gdansk-jasien",
+      title: "Kuchnia",
+      location: "GDAŃSK JASIEŃ",
       category: "apartamenty",
       categoryLabel: "Apartamenty i rezydencje",
       description: "Kuchnia na wymiar zaprojektowana jako część rezydencji.",
@@ -96,8 +96,8 @@
       imageCount: 4,
     }),
     createProject({
-      slug: "rezydencja-bernadowska",
-      title: "Rezydencja Bernadowska",
+      slug: "bernadowska-gdynia",
+      title: "Bernadowska",
       location: "GDYNIA",
       category: "apartamenty",
       categoryLabel: "Apartamenty i rezydencje",
@@ -106,8 +106,8 @@
       imageCount: 5,
     }),
     createProject({
-      slug: "rezydencja-stolema-gdansk",
-      title: "Rezydencja Stolema",
+      slug: "stolema-gdansk",
+      title: "Stolema",
       location: "GDAŃSK",
       category: "apartamenty",
       categoryLabel: "Apartamenty i rezydencje",
@@ -116,8 +116,8 @@
       imageCount: 8,
     }),
     createProject({
-      slug: "realizacja-komercyjna-barber-pruszcz-gdanski",
-      title: "Salon barberski",
+      slug: "barbershop-pruszcz-gdanski",
+      title: "Barbershop",
       location: "PRUSZCZ GDAŃSKI",
       category: "komercyjne",
       categoryLabel: "Wnętrza komercyjne",
@@ -287,7 +287,7 @@
     const showImage = (index) => {
       const filename = project.images[index];
       modalFields.image.src = imageUrl(project, filename);
-      modalFields.image.alt = `${project.title} — zdjęcie ${index + 1}`;
+      modalFields.image.alt = `${project.title} – zdjęcie ${index + 1}`;
       modalFields.gallery.querySelectorAll("button").forEach((thumbnail, i) => {
         const selected = i === index;
         thumbnail.setAttribute("aria-pressed", String(selected));

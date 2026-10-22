@@ -22,6 +22,10 @@
 @import "tailwindcss";
 @config "./tailwind.config.js";
 
+@theme {
+  --breakpoint-3xl: 140rem;
+}
+
 /* ==========================================
    PODSTAWOWE STYLE
    ========================================== */
