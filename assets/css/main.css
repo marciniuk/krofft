@@ -1850,8 +1850,14 @@
     .sm\:inline {
       display: inline;
     }
+    .sm\:aspect-4\/3 {
+      aspect-ratio: 4/3;
+    }
     .sm\:aspect-16\/7 {
       aspect-ratio: 16/7;
+    }
+    .sm\:aspect-square {
+      aspect-ratio: 1 / 1;
     }
     .sm\:h-24 {
       height: calc(var(--spacing) * 24);
@@ -2001,10 +2007,6 @@
       font-size: var(--text-5xl);
       line-height: var(--tw-leading, var(--text-5xl--line-height));
     }
-    .sm\:text-6xl {
-      font-size: var(--text-6xl);
-      line-height: var(--tw-leading, var(--text-6xl--line-height));
-    }
     .sm\:text-base {
       font-size: var(--text-base);
       line-height: var(--tw-leading, var(--text-base--line-height));
@@ -2051,6 +2053,9 @@
     }
     .md\:flex {
       display: flex;
+    }
+    .md\:aspect-4\/3 {
+      aspect-ratio: 4/3;
     }
     .md\:aspect-square {
       aspect-ratio: 1 / 1;
@@ -2135,10 +2140,6 @@
       font-size: var(--text-6xl);
       line-height: var(--tw-leading, var(--text-6xl--line-height));
     }
-    .md\:text-7xl {
-      font-size: var(--text-7xl);
-      line-height: var(--tw-leading, var(--text-7xl--line-height));
-    }
     .md\:text-xl {
       font-size: var(--text-xl);
       line-height: var(--tw-leading, var(--text-xl--line-height));
@@ -2186,6 +2187,12 @@
     }
     .lg\:flex {
       display: flex;
+    }
+    .lg\:aspect-4\/5 {
+      aspect-ratio: 4/5;
+    }
+    .lg\:aspect-auto {
+      aspect-ratio: auto;
     }
     .lg\:w-\[36rem\] {
       width: 36rem;
@@ -2294,6 +2301,9 @@
     .xl\:grid-cols-5 {
       grid-template-columns: repeat(5, minmax(0, 1fr));
     }
+    .xl\:grid-cols-6 {
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+    }
     .xl\:grid-cols-12 {
       grid-template-columns: repeat(12, minmax(0, 1fr));
     }
@@ -2393,19 +2403,11 @@
         font-size: var(--text-4xl);
         line-height: var(--tw-leading, var(--text-4xl--line-height));
       }
-      .portrait\:sm\:text-5xl {
-        font-size: var(--text-5xl);
-        line-height: var(--tw-leading, var(--text-5xl--line-height));
-      }
     }
     @media (width >= 48rem) {
       .portrait\:md\:text-5xl {
         font-size: var(--text-5xl);
         line-height: var(--tw-leading, var(--text-5xl--line-height));
-      }
-      .portrait\:md\:text-6xl {
-        font-size: var(--text-6xl);
-        line-height: var(--tw-leading, var(--text-6xl--line-height));
       }
     }
     @media (width >= 64rem) {
