@@ -2,6 +2,15 @@
 <html class="h-full" lang="x-default">
   <head>
     <script>
+      try {
+        const referrer = document.referrer;
+        if (referrer && new URL(referrer).origin !== window.location.origin) {
+          sessionStorage.setItem("krofftConsentReturnTo", referrer);
+        }
+      } catch (error) {
+        console.error("Nie udało się zapisać poprzedniej strony.", error);
+      }
+
       const lang = navigator.language || navigator.userLanguage;
       if (lang.toLowerCase().startsWith("pl")) {
         window.location.replace("/pl/");

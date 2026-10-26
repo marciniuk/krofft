@@ -17,24 +17,6 @@
     <!-- Linki do zasobów -->
     <link rel="preload" href="/assets/css/main.css" as="style" />
     <link rel="stylesheet" href="/assets/css/main.css" />
-    <script defer>
-      document.addEventListener("DOMContentLoaded", () => {
-        const popup = document.getElementById("cookie-popup");
-        if (!popup) return;
-        const accepted = localStorage.getItem("cookiesAccepted");
-
-        if (!accepted) {
-          // Pokazanie banera natychmiast po pierwszym paint
-          requestAnimationFrame(() => (popup.hidden = false));
-        }
-
-        const acceptBtn = document.getElementById("accept-cookies");
-        acceptBtn?.addEventListener("click", () => {
-          localStorage.setItem("cookiesAccepted", "true");
-          popup.remove();
-        });
-      });
-    </script>
     <script>
       function loadFontsCSS(href) {
         const link = document.createElement("link");
@@ -279,7 +261,7 @@
 
     <!-- ==================== HERO SECTION ==================== -->
     <section
-      class="relative min-h-[34vh] sm:min-h-[38vh] portrait:min-h-[30svh] bg-brand-dark text-white flex items-center pt-24 sm:pt-20 overflow-hidden"
+      class="relative min-h-[60vh] bg-brand-dark text-white flex items-center pt-24 sm:pt-20 overflow-hidden"
     >
       <div class="absolute inset-0">
         <img
@@ -687,12 +669,18 @@
         <div
           class="lg:col-span-9 w-full min-w-0 aspect-auto sm:aspect-16/7 min-h-64 overflow-hidden border border-brand-borderLight"
         >
+          <div
+            class="flex h-full min-h-64 items-center justify-center bg-brand-cream px-6 text-center text-sm text-gray-700"
+          >
+            Mapa będzie dostępna po zaakceptowaniu plików cookie.
+          </div>
           <iframe
             title="Mapa dojazdu do siedziby KROFFT przy ul. Łanowej 67B w Gdańsku"
-            src="https://www.google.com/maps?q=ul.%20%C5%81anowa%2067B%2C%2080-777%20Gda%C5%84sk&output=embed"
+            data-cookie-src="https://www.google.com/maps?q=ul.%20%C5%81anowa%2067B%2C%2080-777%20Gda%C5%84sk&output=embed"
             class="w-full min-w-0 h-full min-h-64 border-0"
             loading="lazy"
             referrerpolicy="strict-origin-when-cross-origin"
+            hidden
           ></iframe>
         </div>
       </div>
@@ -1027,5 +1015,6 @@
     </dialog>
 
     <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/cookie-consent.js"></script>
   </body>
 </html>

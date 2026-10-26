@@ -17,24 +17,6 @@
     <!-- Linki do zasobów -->
     <link rel="preload" href="/assets/css/main.css" as="style" />
     <link rel="stylesheet" href="/assets/css/main.css" />
-    <script defer>
-      document.addEventListener("DOMContentLoaded", () => {
-        const popup = document.getElementById("cookie-popup");
-        if (!popup) return;
-        const accepted = localStorage.getItem("cookiesAccepted");
-
-        if (!accepted) {
-          // Pokazanie banera natychmiast po pierwszym paint
-          requestAnimationFrame(() => (popup.hidden = false));
-        }
-
-        const acceptBtn = document.getElementById("accept-cookies");
-        acceptBtn?.addEventListener("click", () => {
-          localStorage.setItem("cookiesAccepted", "true");
-          popup.remove();
-        });
-      });
-    </script>
     <script>
       function loadFontsCSS(href) {
         const link = document.createElement("link");
@@ -279,7 +261,7 @@
 
     <!-- ==================== HERO SECTION (Image 5) ==================== -->
     <section
-      class="relative min-h-[65vh] sm:min-h-[75vh] portrait:min-h-[55svh] bg-brand-dark text-white flex items-center pt-24 sm:pt-20 overflow-hidden"
+      class="relative min-h-[60vh] bg-brand-dark text-white flex items-center pt-24 sm:pt-20 overflow-hidden"
     >
       <!-- Background Image -->
       <div class="absolute inset-0">
@@ -1151,5 +1133,6 @@
     </dialog>
 
     <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/cookie-consent.js"></script>
   </body>
 </html>
